@@ -1,0 +1,64 @@
+$root: '../../';
+@import 'styles';
+
+.sidebar {
+    background-color: rgba($dark, 0.75);
+    min-height: 100vh;
+    min-width: 250px;
+}
+
+.sidebar h1 {
+    padding: 16px 0;
+    font-size: $font-l;
+    text-align: center;
+    margin: 0;
+    background-color: $primary;
+    border-bottom: 1px solid $primary;
+}
+
+
+.navigation {
+    background-color: rgba($primary, 0.75);
+    padding: 0;
+    @extend .navbar;
+}
+
+#toggle-menu {
+    font-size: $font-l;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+#search-box {
+    display: flex;
+    flex-grow: 1;
+}
+
+#search-box i {
+    font-size: $font-l;
+    padding: 18px;
+}
+
+#search-box input {
+    background-color: transparent !important;
+    color: $light;
+    font-size: $font-m;
+    width: 100%;
+    padding: 18px 0;
+    border: none !important;
+    outline: none !important;
+}
+
+.content {
+    width: 100%;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: rgba($dark, 0.35);
+    padding: 25px;
+    text-align: right;
+}

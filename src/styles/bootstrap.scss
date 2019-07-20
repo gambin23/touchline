@@ -1,14 +1,16 @@
 .btn {
-  border-radius: 0;
-  border: none;
-  padding: 15px 20px;
-  font-size: 16px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+    border-radius: 0;
+    border: none;
+    padding: 15px 20px;
+    font-size: $font-s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
 }
 
-.btn:focus, .btn:active:focus, .btn.active:focus{
-  outline:none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
 }
 
 .btn-primary:hover {
@@ -17,4 +19,29 @@
 
 .btn-secondary:hover {
     background-color: mix(white, $secondary, 25%);
+}
+
+.list-group {
+    border-radius: 0;
+    border: none;
+    background: transparent;
+}
+
+.list-group-item {
+    @extend .list-group-item-action;
+    background: transparent;
+    color: $light !important;
+    border-bottom: 1px solid $dark;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: $primary;
+        border-radius: none!important;
+
+    }
+}
+
+.navbar-toggler-icon {
+    color: $light !important;
 }

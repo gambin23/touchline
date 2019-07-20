@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-	selector: 'app-root',
-	templateUrl: './app.component.html'
+	selector: 'navigation',
+	templateUrl: './navigation.component.html',
+	styleUrls: ['./navigation.component.scss']
 })
-export class AppComponent {
+export class NavigationComponent {
 	title = 'Touchline';
 	showMenu = false;
 

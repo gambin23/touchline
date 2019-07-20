@@ -1,21 +1,52 @@
+$root: '../' !default;
+
 $primary: #099999;
 $dark: #2a323a;
+$light: #ffffff;
+
+$text-primary: $light;
+$text-secondary: $dark;
 
 $font-primary: touchline;
 $font-default: monospace;
 
+$font-l: 32px;
+$font-m: 24px;
+$font-s: 14px;
+
 @font-face {
     font-family: touchline;
-    src: url(../styles/fonts//sf-sports-night.woff2);
+    src: url(#{$root}styles/fonts/sf-sports-night.woff2);
 }
 
-h1, h2, h3 {
-  font-family: $font-primary;
+h1,
+h2,
+h3 {
+    font-family: $font-primary;
 }
 
-body, p, .btn {
-  font-family: $font-default;
+body,
+p,
+.btn {
+    font-family: $font-default;
 }
+
+body {
+    color: $light !important;
+}
+
+.background {
+    background-image: url(#{$root}assets/images/background.jpg);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 9999;
+}
+
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import 'bootstrap.scss';

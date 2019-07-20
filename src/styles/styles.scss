@@ -1,0 +1,21 @@
+$primary: #099999;
+$dark: #2a323a;
+
+$font-primary: touchline;
+$font-default: monospace;
+
+@font-face {
+    font-family: touchline;
+    src: url(../styles/fonts//sf-sports-night.woff2);
+}
+
+h1, h2, h3 {
+  font-family: $font-primary;
+}
+
+body, p, .btn {
+  font-family: $font-default;
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import 'bootstrap.scss';

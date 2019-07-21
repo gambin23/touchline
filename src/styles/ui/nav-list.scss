@@ -1,0 +1,24 @@
+@import '_variables';
+
+.nav-list {
+    background: transparent;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list-item {
+    background: transparent;
+    color: $light !important;
+    border-bottom: 1px solid $dark;
+    padding: 15px 25px;
+    font-weight: bold;
+    outline: 0;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+        background: rgba($primary, 0.8);
+    }
+}

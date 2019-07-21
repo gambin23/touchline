@@ -20,28 +20,3 @@
 .btn-secondary:hover {
     background-color: mix(white, $secondary, 25%);
 }
-
-.list-group {
-    border-radius: 0;
-    border: none;
-    background: transparent;
-}
-
-.list-group-item {
-    @extend .list-group-item-action;
-    background: transparent;
-    color: $light !important;
-    border-bottom: 1px solid $dark;
-
-    &:hover,
-    &:active,
-    &:focus {
-        background: $primary;
-        border-radius: none!important;
-
-    }
-}
-
-.navbar-toggler-icon {
-    color: $light !important;
-}

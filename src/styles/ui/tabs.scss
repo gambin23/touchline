@@ -1,0 +1,28 @@
+@import '_variables';
+
+.tabs {
+    list-style: none;
+    display: flex;
+    background-color: rgba($dark, 0.5);
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.tabs-item {
+    padding: 15px 25px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+        background-color: rgba($primary, 0.5);
+        -webkit-box-shadow: inset 0px 0px 0px 10px $primary;
+        -moz-box-shadow: inset 0px 0px 0px 10px $primary;
+        box-shadow: inset 0px 0px 0px 2px $primary;
+    }
+}

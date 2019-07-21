@@ -1,5 +1,6 @@
+
 $root: '../../';
-@import 'styles';
+@import '_variables';
 
 .sidebar {
     background-color: rgba($dark, 0.75);
@@ -20,7 +21,9 @@ $root: '../../';
 .navigation {
     background-color: rgba($primary, 0.75);
     padding: 0;
-    @extend .navbar;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 #toggle-menu {

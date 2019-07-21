@@ -1,0 +1,21 @@
+$root: '../' !default;
+
+$primary: #099999;
+$dark: #2a323a;
+$light: #ffffff;
+$black: #000000;
+
+$text-primary: $light;
+$text-secondary: $dark;
+
+$font-primary: touchline;
+$font-default: monospace;
+
+$font-l: 32px;
+$font-m: 24px;
+$font-s: 14px;
+
+@font-face {
+    font-family: touchline;
+    src: url(#{$root}styles/fonts/sf-sports-night.woff2);
+}

@@ -1,10 +1,10 @@
 <div class="d-flex" id="wrapper">
 	<div class="sidebar" [class.d-none]="showMenu">
 		<h1>Touchline</h1>
-		<div class="list-group">
-			<a href="#" class="list-group-item">DASHBOARD</a>
-			<a href="#" class="list-group-item">TEAM</a>
-		</div>
+		<ul class="nav-list">
+			<li routerLink="home" routerLinkActive="active" class="nav-list-item">Home</li>
+			<li routerLink="login" routerLinkActive="active" class="nav-list-item">Team</li>
+		</ul>
 	</div>
 	<div class="content">
 		<nav class="navigation ">

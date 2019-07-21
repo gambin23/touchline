@@ -1,22 +1,11 @@
-$root: '../' !default;
+@import '_variables.scss';
+@import './ui/nav-list.scss';
+@import './ui/tabs.scss';
+@import './ui/box.scss';
 
-$primary: #099999;
-$dark: #2a323a;
-$light: #ffffff;
-
-$text-primary: $light;
-$text-secondary: $dark;
-
-$font-primary: touchline;
-$font-default: monospace;
-
-$font-l: 32px;
-$font-m: 24px;
-$font-s: 14px;
-
-@font-face {
-    font-family: touchline;
-    src: url(#{$root}styles/fonts/sf-sports-night.woff2);
+a {
+    color: inherit!important;
+    text-decoration: none!important;
 }
 
 h1,

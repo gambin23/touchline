@@ -24,14 +24,15 @@
                         "tsConfig": "tsconfig.app.json",
                         "aot": false,
                         "assets": [
-                            "src/assets"
+                            "src/assets",
+                            "src/styles/fonts"
                         ],
                         "styles": [
                             "src/styles/styles.scss"
                         ],
                         "stylePreprocessorOptions": {
                             "includePaths": [
-                                "./src/styles",
+                                "./src/styles"
                             ]
                         },
                         "scripts": []
@@ -88,7 +89,8 @@
                         "tsConfig": "tsconfig.spec.json",
                         "karmaConfig": "karma.conf.js",
                         "assets": [
-                            "src/assets"
+                            "src/assets",
+                            "src/styles/fonts"
                         ],
                         "styles": [
                             "src/styles/styles.scss"

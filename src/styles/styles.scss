@@ -3,6 +3,10 @@
 @import './ui/tabs.scss';
 @import './ui/box.scss';
 
+body {
+    background-color: $dark!important;
+}
+
 a {
     color: inherit!important;
     text-decoration: none!important;
@@ -25,7 +29,7 @@ body {
 }
 
 .background {
-    background-image: url(#{$root}assets/images/background.jpg);
+    background-image: url(/assets/images/background.jpg);
     width: 100%;
     height: 100%;
     position: fixed;

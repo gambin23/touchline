@@ -1,0 +1,53 @@
+@import '_variables';
+
+input {
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 2px solid $primary !important;
+    color: $light !important;
+    width: 100%;
+    padding: 10px 5px;
+
+    &::placeholder {
+        color: $light !important;
+    }
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-animation: autofill 0s forwards;
+    animation: autofill 0s forwards;
+}
+
+@keyframes autofill {
+    100% {
+        background: rgba($light, 0.05);
+        color: inherit;
+    }
+}
+
+@-webkit-keyframes autofill {
+    100% {
+        background: rgba($light, 0.05);
+        color: inherit;
+    }
+}

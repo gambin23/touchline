@@ -1,7 +1,9 @@
 @import '_variables.scss';
 @import './ui/nav-list.scss';
 @import './ui/tabs.scss';
-@import './ui/box.scss';
+@import './ui/panel.scss';
+@import './ui/forms.scss';
+@import './ui/button.scss';
 
 body {
     background-color: $dark !important;
@@ -9,6 +11,7 @@ body {
     background-image: url(/assets/images/background.jpg);
     background-attachment: fixed;
     background-position: center center;
+    background-size: cover;
     font-size: $font-s !important;
 }
 
@@ -23,7 +26,37 @@ h3 {
     font-family: $font-primary;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 !important;
+    padding: 5px;
+}
+
+h1,
+h2 {
+    font-size: $font-xl!important;
+}
+
+h3,
+h4 {
+    font-size: $font-l!important;
+}
+
+h5,
+h6 {
+    font-size: $font-m!important;
+}
+
 p {
+    padding: 5px;
+    font-family: $font-default;
+}
+
+span {
     font-family: $font-default;
 }
 

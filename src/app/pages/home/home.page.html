@@ -1,1 +1,33 @@
-Home
+<div class="row">
+    <div class="col-lg-4">
+        <panel title="Club Details">
+            <h5 class="panel-title-alt text-center text-uppercase m-0">Bristol City Fc</h5>
+            <div class="box-content">
+                <div class="text-center">
+                    <club-logo id="5" size="XL"></club-logo>
+                </div>
+                <div class="p-4 text-center">
+                    <h5>
+                        <flag iconName="england" size="S"></flag> English League 1
+                    </h5>
+                    <h5>Estimated Value</h5>
+                    <h6><b>€ 120,000,000</b></h6>
+                </div>
+            </div>
+        </panel>
+        <panel title="Stadium">
+            <span class="stadium-name">Stadio San Siro</span>
+            <img class="w-100" src="../../../assets/images/stadium.jpg" />
+        </panel>
+    </div>
+
+    <div class="col-lg-8">
+        <panel title="Manager" padding="true">
+            <h6 class="text-uppercase">{{(user$|async).username}}</h6>
+            <p>{{(user$|async).firstName}} {{(user$|async).lastName}}</p>
+        </panel>
+        <panel title="Players" padding="true">
+            Players
+        </panel>
+    </div>
+</div>

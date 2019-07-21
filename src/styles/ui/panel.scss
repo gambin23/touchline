@@ -1,0 +1,30 @@
+@import '_variables';
+
+.panel {
+    margin-top: 20px;
+    width: 100%;
+    transition: all 500ms;
+
+}
+
+.panel-title {
+    width: 100%;
+    background: rgba($black, 0.5);
+    padding: 15px 25px;
+    font-weight: bold;
+    font-size: $font-m;
+}
+
+.panel-title-alt {
+    @extend .panel-title;
+    background: rgba($primary, 0.5);
+}
+
+.panel-nav {
+    float: right;
+    cursor: pointer;
+}
+
+.panel-content {
+    background: rgba($black, 0.25);
+}

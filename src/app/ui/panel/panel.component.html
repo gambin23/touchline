@@ -1,0 +1,14 @@
+<div class="panel">
+	<div class="panel-title">
+		{{title}}
+		<div class="panel-nav">
+			<i class="fa" [class.fa-caret-up]="!hidePanel" [class.fa-caret-down]="hidePanel"
+				(click)="togglePanel()"></i>
+		</div>
+	</div>
+	<div class="panel-content" [class.collapse]="hidePanel">
+		<div [class.p-4]="padding">
+			<ng-content></ng-content>
+		</div>
+	</div>
+</div>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
 import { User } from '../models/authentication.model';
 
@@ -23,12 +23,12 @@ export class AuthenticationService {
 		return this.isAuthenticated.asObservable();
 	}
 
-	getUser(): User {
-		return JSON.parse(localStorage.getItem('user'));
+	getUser$(): Observable<User> {
+		return of(JSON.parse(localStorage.getItem('user')));
 	}
 
 	private initialState() {
-		const user = this.getUser();
-		return user ? true : false;
+		const user = localStorage.getItem('user');
+		return user !== 'null' ? true : false;
 	}
 }

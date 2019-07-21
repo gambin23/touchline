@@ -17,10 +17,10 @@
     }
 }
 
-.sidebar h1 {
+.sidebar-header {
     flex: 0 0 auto;
     padding: 16px 0;
-    font-size: $font-l;
+    font-size: $font-l!important;
     text-align: center;
     margin: 0;
     background-color: $primary;
@@ -47,7 +47,6 @@
 
 .content {
 	flex: 1 0 auto;
-	margin-top: 50px;
 }
 
 .navigation {

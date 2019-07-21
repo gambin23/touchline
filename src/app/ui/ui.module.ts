@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TabsComponent } from './tabs/tabs.component';
 import { TabComponent } from './tabs/tab.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
 	imports: [
@@ -10,11 +11,13 @@ import { TabComponent } from './tabs/tab.component';
 	],
 	declarations: [
 		TabsComponent,
-		TabComponent
+		TabComponent,
+		FooterComponent
 	],
 	exports: [
 		TabsComponent,
-		TabComponent
+		TabComponent,
+		FooterComponent
 	]
 })
 export class UiModule { }

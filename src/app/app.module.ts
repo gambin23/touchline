@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { HomePage } from './home/home.page';
-import { LoginPage } from './login/login.page';
+import { NavigationComponent } from './pages/navigation/navigation.component';
+import { HomePage } from './pages/home/home.page';
+import { LoginPage } from './pages/login/login.page';
 import { UiModule } from './ui/ui.module';
+import { ServicesModule } from './services/services.module';
+import { AuthenticatedGuard } from './guards/authenticated.guard';
 
 @NgModule({
 	declarations: [
@@ -18,9 +20,10 @@ import { UiModule } from './ui/ui.module';
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
-		UiModule
+		UiModule,
+		ServicesModule
 	],
-	providers: [],
+	providers: [AuthenticatedGuard],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

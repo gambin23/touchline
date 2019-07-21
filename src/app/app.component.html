@@ -1,5 +1,4 @@
-<div class="background">
-    <navigation>
-        <router-outlet></router-outlet>
-    </navigation>
-</div>
+<navigation *ngIf="(isAuthenticated$|async)">
+    <router-outlet></router-outlet>
+</navigation>
+<router-outlet *ngIf="!(isAuthenticated$|async)"></router-outlet>

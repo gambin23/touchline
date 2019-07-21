@@ -4,14 +4,16 @@
     background: transparent;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .nav-list-item {
     background: transparent;
     color: $light !important;
     border-bottom: 1px solid $dark;
-    padding: 15px 25px;
+    padding: 15px 30px;
     font-weight: bold;
+    text-transform: uppercase;
     outline: 0;
     cursor: pointer;
 
@@ -19,6 +21,13 @@
     &:active,
     &:focus,
     &.active {
-        background: rgba($primary, 0.8);
+        background: rgba($primary, 0.5);
+        -webkit-box-shadow: inset 0px 0px 0px 10px $primary;
+        -moz-box-shadow: inset 0px 0px 0px 10px $primary;
+        box-shadow: inset 0px 0px 0px 2px $primary;
+    }
+
+    & > i {
+        margin-right: 20px;
     }
 }

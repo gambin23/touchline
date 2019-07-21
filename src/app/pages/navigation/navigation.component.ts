@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
 	selector: 'navigation',
@@ -6,10 +7,16 @@ import { Component } from '@angular/core';
 	styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
+	constructor(private authenticationService: AuthenticationService) { }
+
 	title = 'Touchline';
 	showMenu = false;
 
 	toggleMenu() {
 		this.showMenu = !this.showMenu;
+	}
+
+	logout() {
+		this.authenticationService.logout();
 	}
 }

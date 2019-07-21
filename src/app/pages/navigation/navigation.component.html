@@ -1,0 +1,38 @@
+<div class="d-flex">
+	<div class="sidebar" [class.collapsed]="showMenu">
+		<h1>Touchline</h1>
+		<div class="sidebar-content">
+			<ul class="nav-list">
+				<li routerLink="home" routerLinkActive="active" class="nav-list-item">
+					<i class="fa fa-home"></i>Home
+				</li>
+				<li routerLink="login" routerLinkActive="active" class="nav-list-item">
+					<i class="fa fa-users"></i>Team
+				</li>
+			</ul>
+			<ul class="nav-list">
+				<li class="nav-list-item" (click)="logout()">
+					<i class="fa fa-sign-out"></i>Log out
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrapper" [class.collapsed]="showMenu">
+		<nav class="navigation">
+			<div id="search-box">
+				<i class="fa fa-search"></i>
+				<input type="text" />
+			</div>
+			<div id="toggle-menu" (click)="toggleMenu()">
+				<i class="fa fa-bars"></i>
+			</div>
+		</nav>
+		<div class="content container">
+			<ng-content></ng-content>
+		</div>
+		<div id="footer">
+			<footer title="Touchline"></footer>
+		</div>
+	</div>
+
+</div>

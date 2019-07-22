@@ -8,6 +8,7 @@ export class PanelComponent {
 	@Input() title: string;
 	@Input() padding = false;
 	@Input() hidePanel = false;
+	@Input() collapsible = true;
 
 	togglePanel() {
 		this.hidePanel = !this.hidePanel;

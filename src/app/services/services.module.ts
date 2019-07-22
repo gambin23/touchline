@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 
 import { AuthenticationService } from './authentication.service';
+import { PlayersService } from './players.service';
 
 @NgModule({
-	imports: [
-
+	imports: [],
+	providers: [
+		AuthenticationService,
+		PlayersService
 	],
-	providers: [AuthenticationService],
 })
 export class ServicesModule { }

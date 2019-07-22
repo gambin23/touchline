@@ -9,13 +9,17 @@ import { LoginPage } from './pages/login/login.page';
 import { UiModule } from './ui/ui.module';
 import { ServicesModule } from './services/services.module';
 import { AuthenticatedGuard } from './guards/authenticated.guard';
+import { PlayersPage } from './pages/players/players.page';
+import { PlayerPage } from './pages/player/player.page';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		NavigationComponent,
 		LoginPage,
-		HomePage
+		HomePage,
+		PlayersPage,
+		PlayerPage
 	],
 	imports: [
 		BrowserModule,

@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginPage } from './pages/login/login.page';
 import { HomePage } from './pages/home/home.page';
 import { AuthenticatedGuard } from './guards/authenticated.guard';
+import { PlayersPage } from './pages/players/players.page';
+import { PlayerPage } from './pages/player/player.page';
 
 
 const routes: Routes = [
@@ -13,6 +15,16 @@ const routes: Routes = [
 	{
 		path: 'home',
 		component: HomePage,
+		canActivate: [AuthenticatedGuard]
+	},
+	{
+		path: 'players',
+		component: PlayersPage,
+		canActivate: [AuthenticatedGuard]
+	},
+	{
+		path: 'player/:id',
+		component: PlayerPage,
 		canActivate: [AuthenticatedGuard]
 	}
 ];

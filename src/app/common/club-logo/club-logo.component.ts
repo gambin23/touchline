@@ -1,27 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Size } from '../ui.model';
+import { Size } from '../../ui/ui.model';
 
 @Component({
-	selector: 'flag',
-	templateUrl: './flag.component.html',
-	styleUrls: ['./flag.component.scss']
+	selector: 'club-logo',
+	templateUrl: './club-logo.component.html',
+	styleUrls: ['./club-logo.component.scss']
 })
-export class FlagComponent implements OnInit {
-	@Input() code?: string;
-	@Input() iconName?: string;
+export class ClubLogoComponent implements OnInit {
+	@Input() id: number;
 	@Input() size: Size;
 
 	dimension: number;
-	value: string;
-	ngOnInit() {
-		if (this.iconName) {
-			this.value = this.iconName;
-		}
 
-		if (this.code) {
-			this.value = this.code;
-		}
+	ngOnInit() {
 		switch (this.size) {
 			case 'S':
 				this.dimension = 32;
@@ -40,4 +32,3 @@ export class FlagComponent implements OnInit {
 		}
 	}
 }
-

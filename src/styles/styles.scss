@@ -1,3 +1,5 @@
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
 @import '_variables.scss';
 @import './ui/nav-list.scss';
 @import './ui/tabs.scss';
@@ -62,6 +64,10 @@ span {
 
 .f-primary {
     font-family: $font-primary;
+}
+
+.b {
+    font-weight: bold;
 }
 
 @import "../../node_modules/bootstrap/scss/bootstrap";

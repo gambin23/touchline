@@ -1,0 +1,71 @@
+<div class="rating" [class.panel-item]="!alt" [class.panel-item-alt]="alt">
+    <span><b>{{name}}</b></span>
+    <div class="rating-stars">
+        <ng-container *ngIf="value < 2.5">
+            <i class="fa fa-star-half star"></i>
+        </ng-container>
+        <ng-container *ngIf="value> 2.5 && value <= 5">
+            <i class="fa fa-star star"></i>
+        </ng-container>
+        <ng-container *ngIf="value > 5 && value <= 7.5">
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star-half star"></i>
+        </ng-container>
+        <ng-container *ngIf="value > 7.5 && value <= 10">
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+        </ng-container>
+        <ng-container *ngIf="value > 10 && value <= 12.5">
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star-half star"></i>
+        </ng-container>
+        <ng-container *ngIf="value > 12.5 && value <= 15">
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+        </ng-container>
+        <ng-container *ngIf="value > 15 && value <= 17.5">
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star-half star"></i>
+        </ng-container>
+        <ng-container *ngIf="value > 17.5 && value <= 20">
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+        </ng-container>
+        <ng-container *ngIf="value > 20 && value <= 22.5">
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star-half star"></i>
+        </ng-container>
+        <ng-container *ngIf="value > 22.5 && value <= 25">
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+        </ng-container>
+        <ng-container *ngIf="value > 25 && value <= 27.5">
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star-half star"></i>
+        </ng-container>
+        <ng-container *ngIf="value > 25 && value <= 30">
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+        </ng-container>
+    </div>
+</div>

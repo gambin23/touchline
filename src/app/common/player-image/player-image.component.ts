@@ -1,13 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Size } from '../ui.model';
+import { Size } from '../../ui/ui.model';
 
 @Component({
-	selector: 'club-logo',
-	templateUrl: './club-logo.component.html',
-	styleUrls: ['./club-logo.component.scss']
+	selector: 'player-image',
+	templateUrl: './player-image.component.html'
 })
-export class ClubLogoComponent implements OnInit {
+export class PlayerImageComponent implements OnInit {
 	@Input() id: number;
 	@Input() size: Size;
 

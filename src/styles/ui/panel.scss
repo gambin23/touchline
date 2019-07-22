@@ -4,7 +4,6 @@
     margin-top: 20px;
     width: 100%;
     transition: all 500ms;
-
 }
 
 .panel-title {
@@ -13,6 +12,7 @@
     padding: 15px 25px;
     font-weight: bold;
     font-size: $font-m;
+    cursor: pointer;
 }
 
 .panel-title-alt {
@@ -26,5 +26,18 @@
 }
 
 .panel-content {
+    background: rgba($black, 0.25);
+}
+
+.panel-att {
+    background: rgba($black, 0.25);
+}
+
+.panel-item {
+    padding: 10px 25px;
+}
+
+.panel-item-alt {
+    @extend .panel-item;
     background: rgba($black, 0.25);
 }

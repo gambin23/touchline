@@ -1,0 +1,21 @@
+@import '_variables';
+
+.rating {
+    display: flex;
+    width: 100%;
+}
+
+.rating span {
+    margin-top: 5px;
+}
+
+.rating-stars {
+    text-align: right;
+    width: 100%
+}
+
+.star {
+    color: gold;
+    font-size: 24px;
+    padding: 5px;
+}

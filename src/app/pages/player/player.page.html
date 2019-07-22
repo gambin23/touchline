@@ -1,3 +1,53 @@
 <ng-container *ngIf="player$|async; let player">
-    <p>{{player.name}} {{player.surname}}</p>
+	<div class="player-banner">
+		<span class="player-number">
+			{{player.shirtNumber}}
+		</span>
+	</div>
+	<div class="row p-4">
+		<player-image [id]="player.avatar" size="L" class="player-image"></player-image>
+		<div class="player-header">
+			<h1>{{positions[player.position]}}</h1>
+			<h4>{{player.name}} {{player.surname}}</h4>
+			<h6>{{player.age[0]}} years / {{player.age[1]}} days</h6>
+		</div>
+	</div>
+	<div class="row mt-5">
+		<div class="col-md-4">
+			<panel title="Details" [collapsible]="false">
+				<div class="panel-item b">
+					<club-logo id="4" class="mr-3"></club-logo>
+					{{player.clubName}}
+				</div>
+				<div class="panel-item-alt b">
+					<flag iconName="england" class="mr-3"></flag>
+					{{player.countryId | country}}
+				</div>
+			</panel>
+			<panel title="Condition">
+				<div class="panel-item b">
+					Fitness {{player.fitness}}
+				</div>
+			</panel>
+			<panel title="Position">
+			</panel>
+		</div>
+
+		<div class="col-md-8">
+			<panel title="Technical Attributes">
+				<rating name="Attacking" [value]="player.attacking"></rating>
+				<rating name="Defending" [value]="player.defending" [alt]="true"></rating>
+				<rating name="Goalkeeping" [value]="player.goalkeeping"></rating>
+				<rating name="Passing" [value]="player.passing" [alt]="true"></rating>
+				<rating name="Shooting" [value]="player.shooting"></rating>
+				<rating name="Heading" [value]="player.heading" [alt]="true"></rating>
+			</panel>
+			<panel title="Physical Attributes">
+				<rating name="Quickness" [value]="player.quickness"></rating>
+				<rating name="Strength" [value]="player.strength" [alt]="true"></rating>
+			</panel>
+			<panel title="Stats">
+			</panel>
+		</div>
+	</div>
 </ng-container>

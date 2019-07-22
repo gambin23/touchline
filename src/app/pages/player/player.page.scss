@@ -1,6 +1,33 @@
 @import '_variables';
 
-.stadium-name {
+.player-banner {
     position: absolute;
-    padding: 10px
+    right: 0;
+    width: 100%;
+    text-align: right;
+    padding: 30px;
+    background-color: rgba($primary, 0.25);
+    border: 2px solid $primary;
+    z-index: -999;
+    height: 225px;
+}
+
+.player-number {
+    font-family: $font-primary;
+    font-size: 160px;
+    line-height: 160px;
+
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.player-header {
+    margin-top: 25px;
+    padding: 0 25px;
+}
+
+.player-image {
+    margin-top: 25px;
+    float: left;
 }

@@ -4,10 +4,11 @@ import { PlayerPosition, PlayingPosition, Player } from '../models/players.model
 export const PLAYER: Player = {
 	id: 1,
 	clubId: 1001,
+	clubName: 'Boston City FC',
 	countryId: 1,
 	name: 'Massimo',
 	surname: 'Truzzi',
-	shirtNumber: 8,
+	shirtNumber: 10,
 	dateOfBirth: new Date(),
 	age: [21, 88],
 	salary: 250000,
@@ -36,6 +37,7 @@ export const PLAYERS: Player[] = [
 	PLAYER, {
 		id: 2,
 		clubId: 1001,
+		clubName: 'AS Luna Rossa',
 		countryId: 1,
 		name: 'Angelo',
 		surname: 'Galesi',

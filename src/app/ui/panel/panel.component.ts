@@ -11,6 +11,8 @@ export class PanelComponent {
 	@Input() collapsible = true;
 
 	togglePanel() {
-		this.hidePanel = !this.hidePanel;
+		if (this.collapsible) {
+			this.hidePanel = !this.hidePanel;
+		}
 	}
 }

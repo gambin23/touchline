@@ -3,7 +3,7 @@
 .panel {
     margin-top: 20px;
     width: 100%;
-    transition: all 500ms;
+    animation: 250ms ease-in bounce;
 }
 
 .panel-title {

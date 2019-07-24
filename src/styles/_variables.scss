@@ -19,3 +19,30 @@ $font-s: 14px;
     font-family: touchline;
     src: url(/styles/fonts/sf-sports-night.woff2);
 }
+
+
+@keyframes bounce {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    25% {
+        transform: scale(.25);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(.5);
+        opacity: 1;
+    }
+
+    75% {
+        transform: scale(.75);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

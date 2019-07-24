@@ -26,3 +26,8 @@
         box-shadow: inset 0px 0px 0px 2px $primary;
     }
 }
+
+.tab-content {
+    @extend .panel-content;
+    border: 2px solid rgba($white, 0.1);
+}

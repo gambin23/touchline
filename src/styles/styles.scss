@@ -1,11 +1,13 @@
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
 @import '_variables.scss';
-@import './ui/nav-list.scss';
-@import './ui/tabs.scss';
-@import './ui/panel.scss';
-@import './ui/forms.scss';
-@import './ui/button.scss';
+@import './ui/_nav-list.scss';
+@import './ui/_tabs.scss';
+@import './ui/_panel.scss';
+@import './ui/_forms.scss';
+@import './ui/_button.scss';
+@import './ui/_circle.scss';
+@import './ui/_tooltip.scss';
 
 body {
     background-color: $dark !important;
@@ -70,5 +72,5 @@ span {
     font-weight: bold;
 }
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
 @import 'bootstrap.scss';

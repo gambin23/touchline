@@ -26,10 +26,11 @@
 			</panel>
 			<panel title="Condition">
 				<div class="panel-item b">
-					Fitness {{player.fitness}}
+					<fitness [percent]="player.fitness" [showText]="true" size="L"></fitness>
 				</div>
 			</panel>
 			<panel title="Position">
+				<img src="../../../assets/images/pitch.svg" style="width: 100%" />
 			</panel>
 		</div>
 

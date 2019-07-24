@@ -24,7 +24,7 @@
     text-align: center;
     margin: 0;
     background-color: $primary;
-    border-bottom: 1px solid $primary;
+    border-bottom: 3px solid $primary;
 }
 
 .sidebar-content {
@@ -60,7 +60,7 @@
 
 #toggle-menu {
     font-size: $font-l;
-    padding: 0 15px;
+    padding: 10px 15px;
     cursor: pointer;
 }
 

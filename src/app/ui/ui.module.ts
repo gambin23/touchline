@@ -5,6 +5,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { TabComponent } from './tabs/tab.component';
 import { FooterComponent } from './footer/footer.component';
 import { PanelComponent } from './panel/panel.component';
+import { CircleProgressComponent } from './circle-progress/circle-progress.component';
 
 @NgModule({
 	imports: [
@@ -14,13 +15,15 @@ import { PanelComponent } from './panel/panel.component';
 		TabsComponent,
 		TabComponent,
 		FooterComponent,
-		PanelComponent
+		PanelComponent,
+		CircleProgressComponent
 	],
 	exports: [
 		TabsComponent,
 		TabComponent,
 		FooterComponent,
-		PanelComponent
+		PanelComponent,
+		CircleProgressComponent
 	]
 })
 export class UiModule { }

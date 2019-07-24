@@ -7,15 +7,38 @@
 
 .rating span {
     margin-top: 5px;
+    min-width: 200px;
 }
 
-.rating-stars {
+.rating-bar {
     text-align: right;
-    width: 100%
+    width: 100%;
+    border: 2px solid rgba($white, 0.05);
+    background-color: rgba($dark, 0.5);
+    height: 30px;
+}
+
+.rating-value {
+    width: 25%;
+    height: 25px;
+    background-color: rgba($primary, 0.65);
+    animation: 1s ease-out slideInFromLeft;
 }
 
 .star {
     color: gold;
     font-size: 24px;
     padding: 5px;
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: var(--v + '%');
+        ;
+    }
 }

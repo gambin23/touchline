@@ -7,7 +7,9 @@
     text-align: right;
     padding: 30px;
     background-color: rgba($primary, 0.25);
-    border: 2px solid $primary;
+    border-bottom: 2px solid $primary;
+    border-left: 2px solid $primary;
+    border-right: 2px solid $primary;
     z-index: -999;
     height: 225px;
 }

@@ -1,0 +1,27 @@
+<div class="rating-team-player">
+    <ng-container *ngIf="rating >= 100">
+        <i class="rtp">&#9632;</i>
+        <i class="rtp">&#9632;</i>
+        <i class="rtp">&#9632;</i>
+        <i class="rtp-1">&#9632;</i>
+        <i class="rtp-1">&#9632;</i>
+    </ng-container>
+    <ng-container *ngIf="rating >= 50 && rating < 100">
+        <i class="rtp-1">&#9632;</i>
+        <i class="rtp-1">&#9632;</i>
+        <i class="rtp-2">&#9632;</i>
+        <i class="rtp-2">&#9632;</i>
+    </ng-container>
+    <ng-container *ngIf="rating >= 0 && rating < 50">
+        <i class="rtp-3">&#9632;</i>
+        <i class="rtp-3">&#9632;</i>
+        <i class="rtp-4">&#9632;</i>
+    </ng-container>
+    <ng-container *ngIf="rating >= -50 && rating < 0">
+        <i class="rtp-4">&#9632;</i>
+        <i class="rtp-5">&#9632;</i>
+    </ng-container>
+    <ng-container *ngIf="rating < -50">
+        <i class="rtp-5">&#9632;</i>
+    </ng-container>
+</div>

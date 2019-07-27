@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-4">
-        <panel title="Club Details" [collapsible]="false">
+        <panel name="Club Details" [collapsible]="false">
             <h5 class="panel-title-alt text-center text-uppercase m-0">Bristol City Fc</h5>
             <div class="box-content">
                 <div class="text-center">
@@ -15,18 +15,18 @@
                 </div>
             </div>
         </panel>
-        <panel title="Stadium" class="d-none d-lg-block">
+        <panel name="Stadium" class="d-none d-lg-block">
             <span class="stadium-name">Stadio San Siro</span>
             <img class="w-100" src="../../../assets/images/stadium.jpg" />
         </panel>
     </div>
 
     <div class="col-lg-8">
-        <panel title="Manager" padding="true">
+        <panel name="Manager" padding="true">
             <h6 class="text-uppercase">{{(user$|async).username}}</h6>
             <p>{{(user$|async).firstName}} {{(user$|async).lastName}}</p>
         </panel>
-        <panel title="Players" padding="true">
+        <panel name="Players" padding="true">
             Players
         </panel>
     </div>

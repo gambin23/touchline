@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
 	templateUrl: './panel.component.html'
 })
 export class PanelComponent {
-	@Input() title: string;
+	@Input() name: string;
 	@Input() padding = false;
 	@Input() hidePanel = false;
 	@Input() collapsible = true;

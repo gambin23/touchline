@@ -1,16 +1,18 @@
-<ng-container *ngIf="percent <= 50">
-    <p *ngIf="showText">Player is in a very bad physical condtion.</p>
-    <circle-progress [percent]="percent" [size]="size" color="red"></circle-progress>
-</ng-container>
-<ng-container *ngIf="percent > 50 && percent <=70">
-    <p *ngIf="showText">Player is in a bad shape.</p>
-    <circle-progress [percent]="percent" [size]="size" color="orange"></circle-progress>
-</ng-container>
-<ng-container *ngIf="percent> 70 && percent <=90">
-    <p *ngIf="showText">Player could do with some rest.</p>
-    <circle-progress [percent]="percent" [size]="size" color="yellow"></circle-progress>
-</ng-container>
-<ng-container *ngIf="percent > 90 && percent <=100">
-    <p *ngIf="showText">Player has an optimal physical condition.</p>
-    <circle-progress [percent]="percent" [size]="size" color="green"> </circle-progress>
-</ng-container>
+<div class="fitness">
+    <ng-container *ngIf="percent <= 50">
+        <p *ngIf="showText">Player is in a very bad physical condtion.</p>
+        <circle-progress [percent]="percent" [size]="size" color="red"></circle-progress>
+    </ng-container>
+    <ng-container *ngIf="percent > 50 && percent <=70">
+        <p *ngIf="showText">Player is in a bad shape.</p>
+        <circle-progress [percent]="percent" [size]="size" color="orange"></circle-progress>
+    </ng-container>
+    <ng-container *ngIf="percent> 70 && percent <=90">
+        <p *ngIf="showText">Player could do with some rest.</p>
+        <circle-progress [percent]="percent" [size]="size" color="yellow"></circle-progress>
+    </ng-container>
+    <ng-container *ngIf="percent > 90 && percent <=100">
+        <p *ngIf="showText">Player has an optimal physical condition.</p>
+        <circle-progress [percent]="percent" [size]="size" color="green"> </circle-progress>
+    </ng-container>
+</div>

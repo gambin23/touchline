@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule as AngularCommonModule } from '@angular/common';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './pages/navigation/navigation.component';
@@ -12,6 +14,7 @@ import { AuthenticatedGuard } from './guards/authenticated.guard';
 import { PlayersPage } from './pages/players/players.page';
 import { PlayerPage } from './pages/player/player.page';
 import { CommonModule } from './common/common.module';
+import { TacticsPage } from './pages/tactics/tactics.page';
 
 @NgModule({
 	imports: [
@@ -20,7 +23,8 @@ import { CommonModule } from './common/common.module';
 		AppRoutingModule,
 		UiModule,
 		ServicesModule,
-		CommonModule
+		CommonModule,
+		DragDropModule
 	],
 	declarations: [
 		AppComponent,
@@ -28,6 +32,7 @@ import { CommonModule } from './common/common.module';
 		LoginPage,
 		HomePage,
 		PlayersPage,
+		TacticsPage,
 		PlayerPage
 	],
 	providers: [AuthenticatedGuard],

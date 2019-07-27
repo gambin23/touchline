@@ -1,0 +1,190 @@
+@import '_variables';
+
+
+#actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#action-icons {
+    display: flex;
+
+    & .btn {
+        padding: 15px 25px;
+        display: inline-block;
+        width: auto;
+        font-weight: bold;
+        font-size: $font-m;
+    }
+}
+
+.tactics-background {
+    width: 100%;
+    height: 700px;
+    margin-top: 5px;
+    background: radial-gradient(rgba(161, 189, 155, 0.5), rgba(0, 97, 6, 0.75));
+    box-shadow: inset 0px 0px 0px 5px rgba($white, 0.75);
+    -webkit-box-shadow: inset 0px 0px 0px 5px rgba($white, 0.75);
+}
+
+.pr0 {
+    @media only screen and (min-width: 992px) {
+        padding-right: 0;
+    }
+}
+
+.pl5 {
+    @media only screen and (min-width: 992px) {
+        padding-left: 5px;
+    }
+}
+
+#subs {
+    @media only screen and (min-width: 992px) {
+        height: 765px;
+        overflow-y: auto;
+    }
+}
+
+.sub {
+    display: flex;
+    padding: 0px;
+    margin: 5px 0;
+    width: 100%;
+    background-color: rgba($dark, 0.75);
+    border: 2px solid $dark;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+
+    &:hover {
+        background-color: rgba($primary, 0.75);
+        border: 2px solid $primary;
+    }
+}
+
+.sub-pos {
+    padding: 15px;
+    width: 55px;
+    margin: -2px;
+    margin-right: 25px;
+    border: 2px solid $primary;
+    background-color: rgba($primary, 0.75);
+    display: inline-block;
+}
+
+.sub-stats {
+    display: flex;
+    align-items: center !important;
+    padding-right: 15px;
+
+    * {
+        margin-left: 50px;
+    }
+}
+
+.s11 {
+    width: 16%;
+    background-color: rgba($primary, 0.5);
+    border: 2px solid $primary;
+    position: absolute;
+    text-align: center;
+    cursor: grab;
+}
+
+.s11-avatar {
+    display: block;
+    margin: 10px;
+}
+
+.s11-num {
+    position: absolute;
+    display: block;
+    top: 0;
+    padding: 10px;
+    font-size: $font-m;
+    font-weight: bold;
+}
+
+.s11-name {
+    font-size: 12px;
+    padding: 2px;
+    background-color: rgba($dark, 0.75);
+    display: block;
+    width: 100%;
+}
+
+.s11-rating {
+    width: 100%;
+    display: block;
+    background-color: rgba($black, 0.75);
+    font-size: $font-xs;
+}
+
+.s11-0 {
+    @extend .s11;
+    bottom: 2%;
+    left: 43%;
+}
+
+.s11-1 {
+    @extend .s11;
+    bottom: 25%;
+    left: 7%;
+}
+
+.s11-2 {
+    @extend .s11;
+    bottom: 25%;
+    left: 30%;
+}
+
+.s11-3 {
+    @extend .s11;
+    bottom: 25%;
+    left: 55%;
+}
+
+.s11-4 {
+    @extend .s11;
+    bottom: 25%;
+    left: 78%;
+}
+
+.s11-5 {
+    @extend .s11;
+    bottom: 50%;
+    left: 7%;
+}
+
+.s11-6 {
+    @extend .s11;
+    bottom: 50%;
+    left: 30%;
+}
+
+.s11-7 {
+    @extend .s11;
+    bottom: 50%;
+    left: 55%;
+}
+
+.s11-8 {
+    @extend .s11;
+    bottom: 50%;
+    left: 78%;
+}
+
+.s11-9 {
+    @extend .s11;
+    bottom: 72%;
+    left: 30%;
+}
+
+.s11-10 {
+    @extend .s11;
+    bottom: 72%;
+    left: 55%;
+}

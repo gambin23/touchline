@@ -15,8 +15,10 @@
 }
 
 .player-number {
-    font-family: $font-primary;
+    font-family: $font-highlight;
     font-size: 160px;
+    font-style: italic;
+    color: mix($primary,white);
     line-height: 160px;
 
     @media only screen and (max-width: 768px) {

@@ -1,0 +1,15 @@
+@import '_variables';
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $dark;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba($white, 0.5);
+}

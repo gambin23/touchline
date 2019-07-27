@@ -2,11 +2,11 @@
 
 .rating {
     display: flex;
+    align-items: center;
     width: 100%;
 }
 
 .rating span {
-    margin-top: 5px;
     min-width: 200px;
 }
 
@@ -23,12 +23,6 @@
     height: 25px;
     background-color: rgba($primary, 0.65);
     animation: 1s ease-out slideInFromLeft;
-}
-
-.star {
-    color: gold;
-    font-size: 24px;
-    padding: 5px;
 }
 
 

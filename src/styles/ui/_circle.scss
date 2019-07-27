@@ -52,13 +52,11 @@ $primary-color-red: red;
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    margin: 0 0.1em 0.1em 0;
     background-color: $secondary-color;
 
     // center circle to its parent
     &.center {
         float: none;
-        margin: 0 auto;
     }
 
     // bigger size

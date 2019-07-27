@@ -8,6 +8,7 @@
 @import './ui/_button.scss';
 @import './ui/_circle.scss';
 @import './ui/_tooltip.scss';
+@import './ui/scrollbar.scss';
 
 body {
     background-color: $dark !important;
@@ -17,6 +18,7 @@ body {
     background-position: center center;
     background-size: cover;
     font-size: $font-s !important;
+    font-family: $font-default!important;
 }
 
 a {

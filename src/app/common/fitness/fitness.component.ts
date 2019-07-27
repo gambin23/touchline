@@ -4,7 +4,8 @@ import { Size } from '../../ui/ui.model';
 
 @Component({
 	selector: 'fitness',
-	templateUrl: './fitness.component.html'
+	templateUrl: './fitness.component.html',
+	styleUrls: ['./fitness.component.scss']
 })
 export class FitnessComponent {
 	@Input() percent: number;

@@ -14,7 +14,7 @@
 	</div>
 	<div class="row mt-5">
 		<div class="col-md-4">
-			<panel title="Details" [collapsible]="false">
+			<panel name="Details" [collapsible]="false">
 				<div class="panel-item b">
 					<club-logo id="4" class="mr-3"></club-logo>
 					{{player.clubName}}
@@ -24,18 +24,18 @@
 					{{player.countryId | country}}
 				</div>
 			</panel>
-			<panel title="Condition">
-				<div class="panel-item b">
+			<panel name="Condition">
+				<div class="panel-item b p-4">
 					<fitness [percent]="player.fitness" [showText]="true" size="L"></fitness>
 				</div>
 			</panel>
-			<panel title="Position">
-				<img src="../../../assets/images/pitch.svg" style="width: 100%" />
+			<panel name="Position">
+				<img src="../../../assets/images/pitch_2.svg" style="width: 100%" />
 			</panel>
 		</div>
 
 		<div class="col-md-8">
-			<panel title="Technical Attributes">
+			<panel name="Technical Attributes">
 				<rating name="Attacking" [value]="player.attacking"></rating>
 				<rating name="Defending" [value]="player.defending" [alt]="true"></rating>
 				<rating name="Goalkeeping" [value]="player.goalkeeping"></rating>
@@ -43,11 +43,11 @@
 				<rating name="Shooting" [value]="player.shooting"></rating>
 				<rating name="Heading" [value]="player.heading" [alt]="true"></rating>
 			</panel>
-			<panel title="Physical Attributes">
+			<panel name="Physical Attributes">
 				<rating name="Quickness" [value]="player.quickness"></rating>
 				<rating name="Strength" [value]="player.strength" [alt]="true"></rating>
 			</panel>
-			<panel title="Stats">
+			<panel name="Stats">
 			</panel>
 		</div>
 	</div>

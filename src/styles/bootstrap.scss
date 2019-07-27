@@ -13,10 +13,20 @@
     box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
 }
 
-.btn-primary:hover {
-    background-color: mix(white, $primary, 25%);
+.btn-primary {
+    background-color: rgba($primary, 0.75);
+    border: 2px solid $primary;
+
+    &:hover {
+        background-color: mix(white, $primary, 25%);
+    }
 }
 
-.btn-secondary:hover {
-    background-color: mix(white, $secondary, 25%);
+.btn-secondary {
+    background-color: rgba($dark, 0.75);
+    border: 2px solid rgba($white, 0.15);
+
+    &:hover {
+        background-color: mix(white, $dark, 25%);
+    }
 }

@@ -8,6 +8,7 @@ import { PlayerImageComponent } from '../common/player-image/player-image.compon
 import { RatingComponent } from './rating/rating.component';
 import { CountryPipe } from './pipes/country.pipe';
 import { FitnessComponent } from './fitness/fitness.component';
+import { RatingTeamPlayerComponent } from './rating-team-player/rating-team-player.component';
 
 @NgModule({
 	imports: [
@@ -20,7 +21,8 @@ import { FitnessComponent } from './fitness/fitness.component';
 		PlayerImageComponent,
 		RatingComponent,
 		CountryPipe,
-		FitnessComponent
+		FitnessComponent,
+		RatingTeamPlayerComponent
 	],
 	exports: [
 		ClubLogoComponent,
@@ -28,7 +30,8 @@ import { FitnessComponent } from './fitness/fitness.component';
 		PlayerImageComponent,
 		RatingComponent,
 		CountryPipe,
-		FitnessComponent
+		FitnessComponent,
+		RatingTeamPlayerComponent
 	]
 })
 export class CommonModule { }

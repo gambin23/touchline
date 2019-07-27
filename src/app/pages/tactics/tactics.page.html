@@ -1,0 +1,63 @@
+<panel name="Tactics" [collapsible]="false">
+	<div class="row">
+		<div class="col-lg-6 pr0">
+			<div id="starting-11">
+				<div id="actions">
+					<div id="tactic" class="panel-title-alt"> 4-4-2 </div>
+					<div id="action-icons">
+						<button class="btn btn-secondary" data-tooltip="Undo" (click)="undo()"
+							[disabled]="previousSelection.length === 0">
+							<i class="fa fa-undo"></i>
+						</button>
+						<button class="btn btn-primary" data-tooltip="Save" (click)="save()"
+							[disabled]="previousSelection.length === 0">
+							<i class="fa fa-save"></i>
+						</button>
+					</div>
+				</div>
+
+				<div class="tactics-background">
+					<div *ngFor="let player of players.slice(0,11); let i = index;" draggable="true"
+						[class]="'s11-' + i" [id]="player.id" (drop)="drop($event)" (dragover)="allowDrop($event)"
+						(dragstart)="drag($event)">
+						<player-image [id]="player.avatar" size="M" class="s11-avatar"></player-image>
+						<div class="s11-num">{{player.shirtNumber}}</div>
+						<span class="s11-name">
+							{{player.name|slice:0:1}}. {{player.surname|slice:0:7}}<span
+								*ngIf="player.surname.length > 7">&hellip;</span>
+						</span>
+						<rating-team-player class="s11-rating" [team]="players" [player]="player"></rating-team-player>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 pl5">
+			<div id="subs">
+				<div class="panel-title-alt">Substitutes</div>
+				<div *ngFor="let player of players.slice(11, 18)" draggable="true" class="sub" [id]="player.id"
+					(drop)="drop($event)" (dragover)="allowDrop($event)" (dragstart)="drag($event)">
+					<div class="sub-details">
+						<span class="sub-pos">{{playerPositions[player.position]}}</span>
+						{{player.shirtNumber}}. {{player.name}} {{player.surname}}
+					</div>
+					<div class="sub-stats">
+						<rating-team-player [team]="players" [player]="player"></rating-team-player>
+						<fitness [percent]="player.fitness" size="S"> </fitness>
+					</div>
+				</div>
+				<div class="panel-title-alt">Other</div>
+				<div *ngFor="let player of players.slice(18, players.length)" draggable="true" class="sub"
+					[id]="player.id" (drop)="drop($event)" (dragover)="allowDrop($event)" (dragstart)="drag($event)">
+					<div class="sub-details">
+						<span class="sub-pos">{{playerPositions[player.position]}}</span>
+						{{player.shirtNumber}}. {{player.name}} {{player.surname}}
+					</div>
+					<div class="sub-stats">
+						<rating-team-player [team]="players" [player]="player"></rating-team-player>
+						<fitness [percent]="player.fitness" size="S"> </fitness>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</panel>

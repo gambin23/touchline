@@ -28,6 +28,7 @@ export interface Player {
 	heading: number;
 	quickness: number;
 	strength: number;
+	value: number;
 }
 
 export enum PlayerPosition {

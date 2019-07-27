@@ -20,7 +20,7 @@
 .sidebar-header {
     flex: 0 0 auto;
     padding: 16px 0;
-    font-size: $font-l!important;
+    font-size: $font-l !important;
     text-align: center;
     margin: 0;
     background-color: $primary;
@@ -46,7 +46,7 @@
 }
 
 .content {
-	flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
 .navigation {
@@ -67,6 +67,10 @@
 #search-box {
     display: flex;
     flex-grow: 1;
+
+    & input {
+        font-weight: bold !important;
+    }
 }
 
 #search-box i {

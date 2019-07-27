@@ -7,19 +7,30 @@ $white: #ffffff;
 $text-primary: $light;
 $text-secondary: $dark;
 
-$font-primary: touchline;
-$font-default: monospace;
+$font-primary: primary;
+$font-highlight: font-highlight;
+$font-default: touchline;
 
 $font-xl: 32px;
 $font-l: 24px;
 $font-m: 18px;
 $font-s: 14px;
+$font-xs: 10px;
+
+@font-face {
+    font-family: primary;
+    src: url(/styles/fonts/primary.woff2);
+}
+
+@font-face {
+    font-family: font-highlight;
+    src: url(/styles/fonts/highlight.otf);
+}
 
 @font-face {
     font-family: touchline;
-    src: url(/styles/fonts/sf-sports-night.woff2);
+    src: url(/styles/fonts/default.ttf);
 }
-
 
 @keyframes bounce {
     0% {

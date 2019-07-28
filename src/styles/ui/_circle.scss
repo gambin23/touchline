@@ -60,13 +60,17 @@ $primary-color-red: red;
     }
 
     // bigger size
-    &.big {
+    &.l {
         font-size: 120px;
     }
 
     // smaller size
-    &.small {
+    &.s {
         font-size: 32px;
+    }
+
+    &.xs {
+        font-size: 16px;
     }
 
     // centered value inside circle

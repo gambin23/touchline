@@ -8,7 +8,7 @@
 
 .panel-title {
     width: 100%;
-    background: rgba($black, 0.6);
+    background: rgba($black, 0.75);
     padding: 15px 25px;
     font-weight: bold;
     font-size: $font-m;
@@ -18,7 +18,7 @@
 .panel-title-alt {
     @extend .panel-title;
     border: 2px solid $primary;
-    background: rgba($primary, 0.6);
+    background: rgba($primary, 0.75);
 }
 
 .panel-nav {
@@ -27,11 +27,11 @@
 }
 
 .panel-content {
-    background: rgba($black, 0.25);
+    background: rgba($black, 0.35);
 }
 
 .panel-att {
-    background: rgba($black, 0.25);
+    background: rgba($black, 0.35);
 }
 
 .panel-item {

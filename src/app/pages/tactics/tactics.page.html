@@ -5,7 +5,7 @@
 				<div id="actions">
 					<div id="tactic" class="panel-title-alt"> 4-4-2 </div>
 					<div id="action-icons">
-						<button class="btn btn-secondary" data-tooltip="Undo" (click)="undo()"
+						<button class="btn btn-primary" data-tooltip="Undo" (click)="undo()"
 							[disabled]="previousSelection.length === 0">
 							<i class="fa fa-undo"></i>
 						</button>
@@ -42,7 +42,7 @@
 					</div>
 					<div class="sub-stats">
 						<rating-team-player [team]="players" [player]="player"></rating-team-player>
-						<fitness [percent]="player.fitness" size="S"> </fitness>
+						<fitness [percent]="player.fitness"></fitness>
 					</div>
 				</div>
 				<div class="panel-title-alt">Other</div>
@@ -54,7 +54,7 @@
 					</div>
 					<div class="sub-stats">
 						<rating-team-player [team]="players" [player]="player"></rating-team-player>
-						<fitness [percent]="player.fitness" size="S"> </fitness>
+						<fitness [percent]="player.fitness"> </fitness>
 					</div>
 				</div>
 			</div>

@@ -6,6 +6,7 @@ import { AuthenticatedGuard } from './guards/authenticated.guard';
 import { TacticsPage } from './pages/tactics/tactics.page';
 import { PlayersPage } from './pages/players/players.page';
 import { PlayerPage } from './pages/player/player.page';
+import { SettingsPage } from './pages/settings/settings.page';
 
 
 const routes: Routes = [
@@ -31,6 +32,11 @@ const routes: Routes = [
 	{
 		path: 'player/:id',
 		component: PlayerPage,
+		canActivate: [AuthenticatedGuard]
+	},
+	{
+		path: 'settings',
+		component: SettingsPage,
 		canActivate: [AuthenticatedGuard]
 	}
 ];

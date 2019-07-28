@@ -1,0 +1,14 @@
+<div class="row gallery">
+	<div class="col-md-4 col-6 p-0" *ngFor="let imageId of backgroundImages">
+		<div class="gallery-item">
+			<i *ngIf="activeId === imageId" class="gallery-active fa fa-check-circle"></i>
+			<img [src]="imagesPath + imageId + '.jpg'" height="200px" (click)="changeBackground(imageId)" />
+		</div>
+	</div>
+	<div class="col-md-4 col-6 p-0">
+		<div class="gallery-item">
+			<i *ngIf="activeId === 0" class="gallery-active fa fa-check-circle"></i>
+			<img height="200px" (click)="changeBackground(0)" />
+		</div>
+	</div>
+</div>

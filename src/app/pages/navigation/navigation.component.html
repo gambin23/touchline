@@ -14,6 +14,9 @@
 				</li>
 			</ul>
 			<ul class="nav-list">
+				<li routerLink="settings" routerLinkActive="active" class="nav-list-item">
+					<i class="fa fa-cog"></i>Settings
+				</li>
 				<li class="nav-list-item" (click)="logout()">
 					<i class="fa fa-sign-out"></i>Log out
 				</li>
@@ -33,9 +36,7 @@
 		<div class="content container">
 			<ng-content></ng-content>
 		</div>
-		<div id="footer">
-			<footer name="Touchline"></footer>
-		</div>
+			<footer id="footer"></footer>
 	</div>
 
 </div>

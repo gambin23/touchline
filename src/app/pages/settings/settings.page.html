@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="col-lg-4">
+		<panel name="Settings" [collapsible]="false">
+			<ul class="list">
+				<li class="list-item" [routerLink]="" fragment="account" [class.active]="(fragment|async) === 'account'">
+					Account
+				</li>
+				<li class="list-item" [routerLink]="" fragment="theme" [class.active]="(fragment|async)  === 'theme'">
+					Theme
+				</li>
+				<li class="list-item" [routerLink]="" fragment="background" [class.active]="(fragment|async)  === 'background'">
+					Background
+				</li>
+			</ul>
+		</panel>
+	</div>
+
+	<div class="col-lg-8">
+		<panel name="Account" padding="true" [collapsible]="false" [hidden]="(fragment|async)  !== 'account'">
+			My account
+		</panel>
+		<panel name="Background" [collapsible]="false" [hidden]="(fragment|async)  !== 'background'">
+			<settings-background></settings-background>
+		</panel>
+	</div>
+</div>

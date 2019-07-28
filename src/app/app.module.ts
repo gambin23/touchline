@@ -15,6 +15,8 @@ import { PlayersPage } from './pages/players/players.page';
 import { PlayerPage } from './pages/player/player.page';
 import { CommonModule } from './common/common.module';
 import { TacticsPage } from './pages/tactics/tactics.page';
+import { SettingsPage } from './pages/settings/settings.page';
+import { SettingsBackgroundComponent } from './pages/settings/background/background.component';
 
 @NgModule({
 	imports: [
@@ -33,7 +35,9 @@ import { TacticsPage } from './pages/tactics/tactics.page';
 		HomePage,
 		PlayersPage,
 		TacticsPage,
-		PlayerPage
+		PlayerPage,
+		SettingsPage,
+		SettingsBackgroundComponent
 	],
 	providers: [AuthenticatedGuard],
 	bootstrap: [AppComponent]

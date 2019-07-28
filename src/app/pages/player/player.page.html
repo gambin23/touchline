@@ -15,14 +15,16 @@
 	<div class="row mt-5">
 		<div class="col-md-4">
 			<panel name="Details" [collapsible]="false">
-				<div class="panel-item b">
-					<club-logo id="4" class="mr-3"></club-logo>
-					{{player.clubName}}
-				</div>
-				<div class="panel-item-alt b">
-					<flag iconName="england" class="mr-3"></flag>
-					{{player.countryId | country}}
-				</div>
+				<ul class="list">
+					<li class="list-item text-uppercase">
+						<club-logo id="4" class="mr-3"></club-logo>
+						{{player.clubName}}
+					</li>
+					<li class="list-item">
+						<flag iconName="england" class="mr-3"></flag>
+						{{player.countryId | country}}
+					</li>
+				</ul>
 			</panel>
 			<panel name="Condition">
 				<div class="panel-item b p-4">

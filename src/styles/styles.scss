@@ -7,18 +7,21 @@
 @import './ui/_forms.scss';
 @import './ui/_button.scss';
 @import './ui/_circle.scss';
+@import './ui/list.scss';
 @import './ui/_tooltip.scss';
+@import './ui/gallery.scss';
 @import './ui/scrollbar.scss';
 
 body {
     background-color: $dark !important;
     color: $light !important;
-    background-image: url(/assets/images/background.jpg);
+    background-color: $dark;
+    background-image: url(/assets/backgrounds/1.jpg);
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
     font-size: $font-s !important;
-    font-family: $font-default!important;
+    font-family: $font-default !important;
 }
 
 a {
@@ -44,17 +47,17 @@ h6 {
 
 h1,
 h2 {
-    font-size: $font-xl!important;
+    font-size: $font-xl !important;
 }
 
 h3,
 h4 {
-    font-size: $font-l!important;
+    font-size: $font-l !important;
 }
 
 h5,
 h6 {
-    font-size: $font-m!important;
+    font-size: $font-m !important;
 }
 
 p {
@@ -72,6 +75,10 @@ span {
 
 .b {
     font-weight: bold;
+}
+
+:focus {
+    outline: 0;
 }
 
 @import "~bootstrap/scss/bootstrap";

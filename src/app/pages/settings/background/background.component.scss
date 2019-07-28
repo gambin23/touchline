@@ -1,0 +1,10 @@
+@import '_variables';
+
+.gallery-active {
+    position: absolute;
+    display: block;
+    bottom: 8%;
+    right: 8%;
+    font-size: $font-l;
+    color: $white;
+}

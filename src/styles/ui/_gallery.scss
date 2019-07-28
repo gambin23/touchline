@@ -1,0 +1,24 @@
+@import '_variables';
+
+.gallery {
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+
+.gallery-item {
+    padding: 0;
+    border: 2px solid rgba($white, 0.5);
+    margin: 2px;
+    overflow: hidden;
+    cursor: pointer;
+
+    & img {
+        width: 100%;
+        background-color: $dark;
+        transition: transform .5s ease;
+    }
+
+    & img:hover {
+        transform: scale(1.5);
+    }
+}

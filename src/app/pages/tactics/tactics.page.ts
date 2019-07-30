@@ -62,8 +62,8 @@ export class TacticsPage implements OnInit, OnDestroy {
 		const starting11 = orderBy(players
 			.filter(p => p.playingPosition >= PlayingPosition.Position1 && p.playingPosition <= PlayingPosition.Position11),
 			p => p.playingPosition);
-		const subs = orderBy(players.filter(p => p.playingPosition > PlayingPosition.Position11), p => p.position);
-		const others = orderBy(players.filter(p => p.playingPosition === PlayingPosition.NoPosition), [p => p.position, p => p.shirtNumber]);
+		const subs = orderBy(players.filter(p => p.playingPosition > PlayingPosition.Position11), p => p.playingPosition);
+		const others = players.filter(p => p.playingPosition === PlayingPosition.NoPosition);
 		return [...starting11, ...subs, ...others];
 	}
 }

@@ -17,6 +17,7 @@ import { CommonModule } from './common/common.module';
 import { TacticsPage } from './pages/tactics/tactics.page';
 import { SettingsPage } from './pages/settings/settings.page';
 import { SettingsBackgroundComponent } from './pages/settings/background/background.component';
+import { LeagueModule } from './pages/league/league.module';
 
 @NgModule({
 	imports: [
@@ -26,7 +27,9 @@ import { SettingsBackgroundComponent } from './pages/settings/background/backgro
 		UiModule,
 		ServicesModule,
 		CommonModule,
-		DragDropModule
+		DragDropModule,
+
+		LeagueModule
 	],
 	declarations: [
 		AppComponent,

@@ -12,8 +12,9 @@ export class PlayersService {
 		return of(PLAYERS);
 	}
 
-	player$(playerId: number): Observable<Player> {
-		return of(PLAYER);
+	player$(id: number): Observable<Player> {
+		var player = PLAYERS.find(p => p.id === id);
+		return of(player);
 	}
 
 }

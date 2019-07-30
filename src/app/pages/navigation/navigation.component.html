@@ -12,13 +12,16 @@
 				<li routerLink="tactics" routerLinkActive="active" class="nav-list-item">
 					<i class="fa fa-users"></i>Tactics
 				</li>
+				<li routerLink="league/1" routerLinkActive="active" class="nav-list-item">
+					<i class="fa fa-clipboard-list"></i>League
+				</li>
 			</ul>
 			<ul class="nav-list">
 				<li routerLink="settings" routerLinkActive="active" class="nav-list-item">
 					<i class="fa fa-cog"></i>Settings
 				</li>
 				<li class="nav-list-item" (click)="logout()">
-					<i class="fa fa-sign-out"></i>Log out
+					<i class="fa fa-sign-out-alt"></i>Log out
 				</li>
 			</ul>
 		</div>
@@ -36,7 +39,7 @@
 		<div class="content container">
 			<ng-content></ng-content>
 		</div>
-			<footer id="footer"></footer>
+		<footer id="footer"></footer>
 	</div>
 
 </div>

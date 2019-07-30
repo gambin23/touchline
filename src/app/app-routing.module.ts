@@ -7,12 +7,18 @@ import { TacticsPage } from './pages/tactics/tactics.page';
 import { PlayersPage } from './pages/players/players.page';
 import { PlayerPage } from './pages/player/player.page';
 import { SettingsPage } from './pages/settings/settings.page';
+import { LeaguePage } from './pages/league/ui/league.page';
 
 
 const routes: Routes = [
 	{
 		path: 'login',
 		component: LoginPage
+	},
+	{
+		path: 'settings',
+		component: SettingsPage,
+		canActivate: [AuthenticatedGuard]
 	},
 	{
 		path: 'home',
@@ -30,15 +36,16 @@ const routes: Routes = [
 		canActivate: [AuthenticatedGuard]
 	},
 	{
-		path: 'player/:id',
-		component: PlayerPage,
+		path: 'league/:id',
+		component: LeaguePage,
 		canActivate: [AuthenticatedGuard]
 	},
 	{
-		path: 'settings',
-		component: SettingsPage,
+		path: 'player/:id',
+		component: PlayerPage,
 		canActivate: [AuthenticatedGuard]
 	}
+
 ];
 
 @NgModule({

@@ -1,5 +1,7 @@
 import { PlayerPosition, PlayingPosition, Player } from '../models/players.model';
-
+import { Club, League } from '../pages/league/sdk/league.model';
+import { Color } from '../models/color';
+import { Tactic } from '../models/tactic';
 
 export const PLAYER: Player = {
 	id: 1,
@@ -21,6 +23,8 @@ export const PLAYER: Player = {
 	avatar: 2,
 	seasonGoals: 3,
 	careerGoals: 16,
+	seasonAssists: 2,
+	careerAssists: 16,
 	playingPosition: PlayingPosition.Position6,
 	fitness: 75,
 	attacking: 12,
@@ -59,7 +63,44 @@ export const PLAYERS: Player[] = [
 	{ ...PLAYER, id: 22, name: 'Sean', surname: 'Abela', shirtNumber: 73, position: PlayerPosition.CM, playingPosition: PlayingPosition.NoPosition, value: 90000 },
 	{ ...PLAYER, id: 23, name: 'Alex', surname: 'Cauchi', shirtNumber: 76, position: PlayerPosition.ST, playingPosition: PlayingPosition.NoPosition, value: 20000 },
 	{ ...PLAYER, id: 24, name: 'Norbert', surname: 'Borg', shirtNumber: 44, position: PlayerPosition.RM, playingPosition: PlayingPosition.NoPosition, value: 30000 }
-
-
 ]
+
+export const CLUB: Club = {
+	id: 1,
+	countryId: "mt",
+	leagueId: 1,
+	name: "Boston City FC",
+	acronym: 'BCFC',
+	stadium: 'Boston Stadium',
+	color1: Color.Teal,
+	color2: Color.White,
+	balance: 5000000,
+	salaries: 2500000,
+	estimatedValue: 15000000,
+	wins: 9,
+	draws: 3,
+	losses: 4,
+	gf: 50,
+	ga: 11,
+	tactic: Tactic.FourFourTwo,
+	logo: 5,
+	players: PLAYERS,
+	homeMatches: [],
+	awayMatches: []
+}
+
+export const CLUBS: Club[] = [CLUB, CLUB, CLUB, CLUB, CLUB, CLUB, CLUB, CLUB, CLUB, CLUB]
+
+export const LEAGUE: League = {
+	id: 1,
+	countryId: "mt",
+	name: "English Premier League",
+	season: 1,
+	round: 5,
+	tier: 2,
+	clubs: CLUBS,
+	matches: []
+}
+
+
 

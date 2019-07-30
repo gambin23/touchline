@@ -18,6 +18,8 @@ export interface Player {
 	avatar: number;
 	seasonGoals: number;
 	careerGoals: number;
+	seasonAssists: number;
+	careerAssists: number;
 	playingPosition: PlayingPosition;
 	fitness: number;
 	attacking: number;

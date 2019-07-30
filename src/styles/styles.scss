@@ -1,4 +1,4 @@
-@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css);
 
 @import '_variables.scss';
 @import './ui/_nav-list.scss';
@@ -80,6 +80,24 @@ span {
 :focus {
     outline: 0;
 }
+
+table {
+    width: 100%;
+}
+
+thead tr td {
+    text-align: center;
+}
+
+tr {
+    margin: 15px;
+}
+
+
+td, th {
+    padding: 15px 25px;
+}
+
 
 @import "~bootstrap/scss/bootstrap";
 @import 'bootstrap.scss';

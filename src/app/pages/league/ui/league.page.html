@@ -1,0 +1,68 @@
+<div *ngIf="!league">
+	loading...
+</div>
+
+<div *ngIf="league" class="row">
+	<div class="col-lg-8">
+		<panel name="League">
+			<div class="panel-title-alt">
+				<flag iconName='england' class='mr-3'></flag>
+				{{league.name}}
+			</div>
+			<table>
+				<thead class="panel-item-alt">
+					<tr>
+						<th>POS</th>
+						<th>CLUB</th>
+						<th class="text-center">Pl</th>
+						<th class="text-center">W</th>
+						<th class="text-center">D</th>
+						<th class="text-center">L</th>
+						<th class="text-center">GD</th>
+						<th class="text-center">PTS</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr [class.panel-item]="i % 2" [class.panel-item-alt]="i % 2" *ngFor="let club of league.clubs; let i = index;">
+						<td>{{i + 1}}</td>
+						<td>
+							<club-logo [id]="club.logo"></club-logo> {{club.name}}
+						</td>
+						<td class="text-center">{{league.round}}</td>
+						<td class="text-center">{{club.wins}}</td>
+						<td class="text-center">{{club.draws}}</td>
+						<td class="text-center">{{club.losses}}</td>
+						<td class="text-center">{{club.gf - club.ga}}</td>
+						<td class="text-center b">{{club.points}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</panel>
+		<panel name="Fixtures">
+			<p *ngIf="league.matches.length === 0" class="list-item">There are no fixtures to display.</p>
+		</panel>
+	</div>
+
+	<div class="col-lg-4">
+		<panel name="Top Scorers">
+			<p *ngIf="topScorers.length === 0" class="list-item">No goal scorers to display.</p>
+			<ng-container *ngIf="topScorers.length > 0">
+				<div class="list-item" [routerLink]="['/player', player.id]" [class.active]="i === 0" *ngFor="let player of topScorers; let i = index">
+					<span class="top-score">{{player.seasonGoals}}</span>
+					{{player.name}} {{player.surname}}
+					<player-image [id]="player.avatar" size="M"></player-image>
+				</div>
+			</ng-container>
+		</panel>
+		<panel name="Top Assists">
+			<p *ngIf="topAssists.length === 0" class="list-item">No assist men to display.</p>
+			<ng-container *ngIf="topAssists.length > 0">
+				<div class="list-item" [routerLink]="['/player', player.id]" [class.active]="i === 0" *ngFor="let player of topAssists; let i = index">
+					<span class="top-score">{{player.seasonAssists}}</span>
+					{{player.name}} {{player.surname}}
+					<player-image [id]="player.avatar" size="M"></player-image>
+				</div>
+			</ng-container>
+		</panel>
+	</div>
+</div>

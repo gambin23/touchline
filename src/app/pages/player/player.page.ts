@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable, Subscription } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { PlayersService } from '../../services/players.service';
 import { Player, PlayerPosition } from 'src/app/models/players.model';
@@ -9,12 +11,24 @@ import { Player, PlayerPosition } from 'src/app/models/players.model';
 	templateUrl: './player.page.html',
 	styleUrls: ['./player.page.scss']
 })
-export class PlayerPage implements OnInit {
-	constructor(private playersService: PlayersService) { }
+export class PlayerPage implements OnInit, OnDestroy {
 
+	constructor(
+		private playersService: PlayersService,
+		private route: ActivatedRoute
+	) { }
+
+	subscription = new Subscription();
 	player$: Observable<Player>;
 	positions = PlayerPosition;
+
 	ngOnInit() {
-		this.player$ = this.playersService.player$(1);
+		this.route.params.subscribe(params => {
+			this.player$ = this.playersService.player$(Number(params.id));
+		});
+	}
+
+	ngOnDestroy() {
+		this.subscription.unsubscribe();
 	}
 }

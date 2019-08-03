@@ -14,6 +14,8 @@
 @import './ui/_select.scss';
 
 body {
+    min-height:100%;
+    position: relative;
     color: $light !important;
     background-color: mix($dark, $black)!important;
     background-image: url(/assets/backgrounds/1.jpg);

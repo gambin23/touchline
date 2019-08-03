@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import { Player } from '../../../models/classes/player.model';
+import { Player } from '../../../models/models.index';
 import { PLAYERS } from '../../../services/data';
 
 @Injectable()

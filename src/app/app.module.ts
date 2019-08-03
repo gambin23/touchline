@@ -12,12 +12,13 @@ import { ServicesModule } from './services/services.module';
 import { AuthenticatedGuard } from './guards/authenticated.guard';
 import { PlayersPage } from './pages/players/players.page';
 import { CommonModule } from './common/common.module';
-import { TacticsPage } from './pages/tactics/tactics.page';
+import { TacticsPage } from './pages/tactics/ui/tactics.page';
 import { SettingsPage } from './pages/settings/settings.page';
 import { SettingsBackgroundComponent } from './pages/settings/background/background.component';
 import { LeagueModule } from './pages/league/league.module';
 import { PlayerModule } from './pages/player/player.module';
 import { ClubModule } from './pages/club/club.module';
+import { TacticsModule } from './pages/tactics/tactics.module';
 
 @NgModule({
 	imports: [
@@ -30,14 +31,14 @@ import { ClubModule } from './pages/club/club.module';
 		DragDropModule,
 		LeagueModule,
 		ClubModule,
-		PlayerModule
+		PlayerModule,
+		TacticsModule
 	],
 	declarations: [
 		AppComponent,
 		NavigationComponent,
 		LoginPage,
 		PlayersPage,
-		TacticsPage,
 		SettingsPage,
 		SettingsBackgroundComponent
 	],

@@ -27,7 +27,14 @@
     border-bottom: 3px solid $primary;
 }
 
+#menu {
+    flex-grow: 1;
+}
+
 .sidebar-content {
+    display: flex;
+    flex-direction: column;
+
     flex: 1 1 auto;
     overflow-y: auto;
 }
@@ -45,17 +52,12 @@
     }
 }
 
-.content {
-    flex: 1 0 auto;
-}
-
 .navigation {
     background-color: rgba($primary, 0.75);
     padding: 0;
     width: 100%;
     display: flex;
     align-items: center;
-    flex-shrink: 0;
 }
 
 #toggle-menu {

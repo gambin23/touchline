@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Player } from '../../models/players.model';
+import { Player } from '../../models/models.index';
 
 @Component({
 	selector: 'rating-team-player',
@@ -17,7 +17,7 @@ export class RatingTeamPlayerComponent implements OnInit {
 		const average = this.team.reduce((cv, p) => cv + p.value, 0) / this.team.length;
 		let change = this.player.value - average;
 		change = change / average;
-		this.rating =  Math.round(change) * 100;
+		this.rating = Math.round(change) * 100;
 	}
 }
 

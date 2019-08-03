@@ -1,0 +1,41 @@
+<div *ngIf="!club$|async" class="loading">
+    loading...
+</div>
+
+<ng-container *ngIf="club$|async; let club">
+    <div class="row">
+        <div class="col-lg-4">
+            <panel name="Club Details" [collapsible]="false">
+                <h5 class="panel-title-alt text-center text-uppercase m-0">{{club.name}}</h5>
+                <div class="panel-content">
+                    <div class="text-center">
+                        <club-logo [id]="club.logo" size="XL"></club-logo>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h5>
+                            <flag iconName="england" size="S"></flag> {{club.league?.name}}
+                        </h5>
+                        <h5>Estimated Value</h5>
+                        <h6><b>€ {{club.estimatedValue | number}}</b></h6>
+                    </div>
+                </div>
+            </panel>
+            <panel name="Stadium" class="d-none d-lg-block">
+                <span class="stadium-name">{{club.stadium}}</span>
+                <img class="w-100" src="../../../assets/images/stadium.jpg" />
+            </panel>
+        </div>
+
+        <div class="col-lg-8">
+            <panel name="Manager">
+                <h5 class="panel-title-alt text-uppercase m-0">{{club.manager?.username}}</h5>
+                <p>{{club.manager?.name}} {{club.manager?.surname}}</p>
+            </panel>
+            <panel name="Key Players">
+                <div *ngFor="let player of keyPlayers(club.players)">
+                    <player-bar [player]="player"></player-bar>
+                </div>
+            </panel>
+        </div>
+    </div>
+</ng-container>

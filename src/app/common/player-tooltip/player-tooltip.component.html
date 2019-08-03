@@ -1,0 +1,29 @@
+<div class="p-tooltip">
+    <div class="row">
+        <div class="col">
+            <div class="p-tooltip-info">
+                <player-image [id]="player.avatar" size="L"></player-image>
+                <div>
+                    <h6><b>{{player.name}} {{player.surname}}</b></h6>
+                    <h6 style="font-size: 10px!important">{{player.age[0]}} years / {{player.age[1]}} days</h6>
+                    <h6>€ {{player.value | number}}</h6>
+                    <h6 style="font-size: 10px!important">€ {{player.salary | number}} / week</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <rating name="Attacking" [value]="player.attacking" size="S"></rating>
+            <rating name="Defending" [value]="player.defending" size="S" [alt]="true"></rating>
+            <rating name="Goalkeeping" [value]="player.goalkeeping" size="S"></rating>
+            <rating name="Passing" [value]="player.passing" size="S" [alt]="true"></rating>
+        </div>
+        <div class="col-sm-6">
+            <rating name="Shooting" [value]="player.shooting" size="S"></rating>
+            <rating name="Heading" [value]="player.heading" size="S" [alt]="true"></rating>
+            <rating name="Quickness" [value]="player.quickness" size="S"></rating>
+            <rating name="Strength" [value]="player.strength" size="S" [alt]="true"></rating>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+@import '_variables';
+
+.select {
+    position: relative;
+    font-family: Arial;
+  }
+
+.select select {
+    display: none;
+    // background-color: transparent;
+    // border: none;
+    // color: white;
+    // min-width: 100px;
+    // padding: 0px 25px;
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    // appearance: none;
+    // cursor: pointer;
+}
+
+option {
+    // background-color: $dark;
+}

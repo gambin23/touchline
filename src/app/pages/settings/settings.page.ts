@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { User } from '../../models/authentication.model';
+import { User } from '../../models/models.index';
 import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
@@ -22,7 +22,7 @@ export class SettingsPage implements OnInit {
 
 	ngOnInit() {
 		this.fragment = this.route.fragment.pipe(map(fragment => fragment ? fragment : 'account'));
-		this.user$ = this.authenticationService.getUser$();
+		this.user$ = this.authenticationService.user$();
 	}
 
 

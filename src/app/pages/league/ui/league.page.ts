@@ -1,9 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { League } from '../sdk/league.model';
 import { LeagueService } from '../sdk/league.service';
-import { Player } from '../../../models/players.model';
+import { Player, League } from '../../../models/models.index';
 
 @Component({
 	selector: 'league-page',

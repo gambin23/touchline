@@ -1,10 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
 
-import { PlayersService } from '../../services/players.service';
-import { Player, PlayerPosition } from 'src/app/models/players.model';
+import { PlayerService } from '../sdk/player.service';
+import { Player, PlayerPosition } from '../../../models/models.index';
 
 @Component({
 	selector: 'player-page',
@@ -14,7 +13,7 @@ import { Player, PlayerPosition } from 'src/app/models/players.model';
 export class PlayerPage implements OnInit, OnDestroy {
 
 	constructor(
-		private playersService: PlayersService,
+		private playersService: PlayerService,
 		private route: ActivatedRoute
 	) { }
 

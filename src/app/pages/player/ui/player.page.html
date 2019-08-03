@@ -1,0 +1,26 @@
+<ng-container *ngIf="player$|async; let player">
+	<div class="player-banner">
+		<span class="player-number">
+			{{player.shirtNumber}}
+		</span>
+	</div>
+	<div class="row p-4 mb-5">
+		<player-image [id]="player.avatar" size="L" class="player-image"></player-image>
+		<div class="player-header">
+			<h1>{{positions[player.position]}}</h1>
+			<h4><b>{{player.name}} {{player.surname}}</b></h4>
+			<h6>{{player.age[0]}} years / {{player.age[1]}} days</h6>
+		</div>
+	</div>
+	<tabs>
+		<tab name="Details" [isWrapped]="false">
+			<player-details [player]="player"></player-details>
+		</tab>
+		<tab name="Contract">
+			Contract
+		</tab>
+		<tab name="Transfer">
+			Transfer
+		</tab>
+	</tabs>
+</ng-container>

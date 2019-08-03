@@ -1,5 +1,14 @@
 @import '_variables';
 
+.club {
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba($primary, 0.75);
+        border: 2px solid $primary;
+    }
+}
+
 .list-item {
     display: flex;
     justify-content: space-between;
@@ -8,4 +17,12 @@
 
 .top-score {
     font-size: $font-l;
+}
+
+.first {
+    background-color: rgba(green, 0.5);
+}
+
+.last {
+    background-color: rgba(red, 0.5);
 }

@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 export class TabComponent {
 	@Input() name: string;
 	@Input() active = false;
+	@Input() isWrapped = true;
 }

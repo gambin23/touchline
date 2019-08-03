@@ -1,1 +1,45 @@
 @import '_variables';
+
+#filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%
+}
+
+.views span {
+    padding: 15px;
+    padding-right: 0;
+    color: mix($primary, $white);
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.views span.active {
+    color: $white !important;
+}
+
+.alt {
+    background-color: rgba($dark, 0.5);
+}
+
+.grid-player {
+    padding: 15px 0;
+    margin: 5px 0;
+    border: 2px solid $dark;
+
+    cursor: pointer;
+
+    &:hover {
+        border-color: $primary;
+        background: rgba($primary, 0.75);
+    }
+}
+
+.grid-player-details {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

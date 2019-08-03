@@ -1,6 +1,6 @@
-<div class="rating" [class.panel-item]="!alt" [class.panel-item-alt]="alt">
+<div class="rating" [class.s]="size === 'S'" [class.panel-item]="!alt" [class.panel-item-alt]="alt">
     <span><b>{{name}}</b></span>
     <div class="rating-bar" [attr.data-tooltip]="tooltip">
-        <div class="rating-value" [style.width]="percent + '%'" [style.--v]="percent"></div>
+        <div class="rating-value" [class.s]="size === 'S'" [style.width]="percent + '%'" [style.--v]="percent"></div>
     </div>
 </div>

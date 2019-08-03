@@ -1,0 +1,63 @@
+@import '_variables';
+
+.player {
+    display: flex;
+    padding: 0px;
+    margin: 5px 0;
+    width: 100%;
+    background-color: rgba($dark, 0.75);
+    border: 2px solid $dark;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba($primary, 0.75);
+        border: 2px solid $primary;
+    }
+}
+
+.player-pos {
+    padding: 15px;
+    width: 55px;
+    margin: -2px;
+    margin-right: 10px;
+    border: 2px solid $primary;
+    background-color: rgba($primary, 0.75);
+    display: inline-block;
+}
+
+.player-no {
+    width: 30px;
+    display: inline-block;
+}
+
+.player-stats {
+    display: flex;
+    align-items: center !important;
+    padding-right: 15px;
+
+    * {
+        margin-left: 50px;
+    }
+}
+
+.player-flag {
+    margin-right: 15px;
+}
+
+.player-info {
+    color: rgba($white, 0.75);
+    padding: 15px;
+}
+
+.player-tooltip {
+    display: none;
+    position: absolute;
+}
+
+.player-details:hover .player-tooltip {
+    display: block;
+}
+

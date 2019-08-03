@@ -1,7 +1,4 @@
-import { PlayerPosition, PlayingPosition, Player } from '../models/players.model';
-import { Club, League } from '../pages/league/sdk/league.model';
-import { Color } from '../models/color';
-import { Tactic } from '../models/tactic';
+import { League, Club, Player, Tactic, Color, PlayingPosition, PlayerPosition } from '../models/models.index';
 
 export const PLAYER: Player = {
 	id: 1,
@@ -21,6 +18,8 @@ export const PLAYER: Player = {
 	injured: false,
 	retired: false,
 	avatar: 2,
+	seasonMatches: 11,
+	careerMatches: 191,
 	seasonGoals: 3,
 	careerGoals: 16,
 	seasonAssists: 2,
@@ -86,10 +85,42 @@ export const CLUB: Club = {
 	logo: 5,
 	players: PLAYERS,
 	homeMatches: [],
-	awayMatches: []
+	awayMatches: [],
+	manager: {
+		name: 'Gilbert',
+		surname: 'Gambin',
+		username: 'Gambin17',
+		clubId: 1
+	}
 }
 
-export const CLUBS: Club[] = [CLUB, CLUB, CLUB, CLUB, CLUB, CLUB, CLUB, CLUB, CLUB, CLUB]
+export const CLUBS: Club[] = [
+	CLUB, CLUB, CLUB, CLUB, CLUB, CLUB, CLUB, CLUB,
+	{
+		...CLUB, ...{
+			id: 2,
+			logo: 2,
+			name: 'AS Vesuvio',
+			manager: {
+				username: 'Derek1',
+				name: 'Derek',
+				surname: 'Micallef',
+				clubId: 2
+			}
+		}
+	}, {
+		...CLUB, ...{
+			id: 3,
+			logo: 1,
+			name: 'Dingli Swallows',
+			manager: {
+				username: 'ChrisS',
+				name: 'Chris',
+				surname: 'Said',
+				clubId: 3
+			}
+		}
+	}]
 
 export const LEAGUE: League = {
 	id: 1,

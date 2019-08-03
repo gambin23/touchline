@@ -3,8 +3,7 @@ import { Observable, of } from 'rxjs';
 import { orderBy } from 'lodash';
 
 import { LEAGUE } from '../../../services/data';
-import { League } from './league.model';
-import { Player } from 'src/app/models/players.model';
+import { Player, League } from '../../../models/models.index';
 
 @Injectable()
 export class LeagueService {

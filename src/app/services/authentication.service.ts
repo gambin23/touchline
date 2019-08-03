@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 
-import { User } from '../models/authentication.model';
+import { User } from '../models/models.index';
 
 @Injectable()
 export class AuthenticationService {
@@ -23,7 +23,7 @@ export class AuthenticationService {
 		return this.isAuthenticated.asObservable();
 	}
 
-	getUser$(): Observable<User> {
+	user$(): Observable<User> {
 		return of(JSON.parse(localStorage.getItem('user')));
 	}
 

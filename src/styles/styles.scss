@@ -7,15 +7,15 @@
 @import './ui/_forms.scss';
 @import './ui/_button.scss';
 @import './ui/_circle.scss';
-@import './ui/list.scss';
+@import './ui/_list.scss';
 @import './ui/_tooltip.scss';
-@import './ui/gallery.scss';
-@import './ui/scrollbar.scss';
+@import './ui/_gallery.scss';
+@import './ui/_scrollbar.scss';
+@import './ui/_select.scss';
 
 body {
-    background-color: $dark !important;
     color: $light !important;
-    background-color: $dark;
+    background-color: mix($dark, $black)!important;
     background-image: url(/assets/backgrounds/1.jpg);
     background-attachment: fixed;
     background-position: center center;
@@ -96,6 +96,12 @@ tr {
 
 td, th {
     padding: 15px 25px;
+}
+
+.hide-md {
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 

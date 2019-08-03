@@ -8,7 +8,7 @@ import { Size } from '../../ui/ui.model';
 	styleUrls: ['./fitness.component.scss']
 })
 export class FitnessComponent {
-	@Input() percent: number;
+	@Input() value: number;
 	@Input() size?: Size;
 	@Input() showText = false;
 }

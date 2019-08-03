@@ -1,0 +1,13 @@
+<div class="player" [routerLink]="link && ['/player', player.id]">
+    <div class="player-details">
+        <span class="player-pos">{{positions[player.position]}}</span>
+        <flag iconName="england" class="player-flag"></flag>
+        <span class="player-no">{{player.shirtNumber}}.</span>
+        {{player.name}} {{player.surname}}
+        <player-tooltip *ngIf="tooltip" class="player-tooltip" [player]="player"></player-tooltip>
+    </div>
+    <div class="player-stats">
+        <rating-team-player *ngIf="team" [player]="player" [team]="team"></rating-team-player>
+        <fitness [value]="player.fitness"></fitness>
+    </div>
+</div>

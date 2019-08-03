@@ -1,5 +1,44 @@
-<ng-container *ngFor="let player of players$|async">
-    <div [routerLink]="['/player', player.id]">
-        <p>{{player.name}} {{player.surname}}</p>
-    </div>
-</ng-container>
+<div style="margin-bottom: 250px">
+	<panel name="Players" [collapsible]="false">
+		<div id="filters" class="panel-title-alt">
+			<div>Filters</div>
+			<div class="views">
+				<span data-tooltip="Grid view" (click)="changeView('grid')" [class.active]="activeView === 'grid'"><i class="fa fa-th-large"></i></span>
+				<span data-tooltip="List view" (click)="changeView('list')" [class.active]="activeView === 'list'"><i class="fa fa-list"></i></span>
+			</div>
+		</div>
+		<ng-container *ngIf="activeView === 'list'">
+			<div [routerLink]="['/player', player.id]" *ngFor="let player of players$|async">
+				<player-bar [player]="player" [tooltip]="true" [team]="players$|async"></player-bar>
+			</div>
+		</ng-container>
+		<ng-container *ngIf="activeView === 'grid'">
+			<div class="grid-player" [routerLink]="['/player', player.id]" [class.alt]="i % 2" *ngFor="let player of players$|async; let i = index">
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						<div class="grid-player-details">
+							<player-image [id]="player.avatar" size="L"></player-image>
+							<div>
+								<h1>{{positions[player.position]}}</h1>
+								<h4><b>{{player.name}} {{player.surname}}</b></h4>
+								<h6>{{player.age[0]}} years / {{player.age[1]}} days</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<rating name="Attacking" [value]="player.attacking" size="S"></rating>
+						<rating name="Defending" [value]="player.defending" size="S"></rating>
+						<rating name="Goalkeeping" [value]="player.goalkeeping" size="S"></rating>
+						<rating name="Passing" [value]="player.passing" size="S"></rating>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<rating name="Shooting" [value]="player.shooting" size="S"></rating>
+						<rating name="Heading" [value]="player.heading" size="S"></rating>
+						<rating name="Quickness" [value]="player.quickness" size="S"></rating>
+						<rating name="Strength" [value]="player.strength" size="S"></rating>
+					</div>
+				</div>
+			</div>
+		</ng-container>
+	</panel>
+</div>

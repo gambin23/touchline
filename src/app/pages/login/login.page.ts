@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AuthenticationService } from 'src/app/services/authentication.service';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
 	selector: 'login-page',
@@ -15,7 +15,7 @@ export class LoginPage {
 	) { }
 
 	login() {
-		this.authenticationService.login({ username: 'Gambin17', firstName: 'Gilbert', lastName: 'Gambin' });
+		this.authenticationService.login({ username: 'Gambin17', name: 'Gilbert', surname: 'Gambin', clubId: 1 });
 		this.router.navigate(['home']);
 	}
 }

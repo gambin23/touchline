@@ -12,27 +12,28 @@
 			<table>
 				<thead class="panel-item-alt">
 					<tr>
-						<th>POS</th>
+						<th class="hide-md">POS</th>
 						<th>CLUB</th>
-						<th class="text-center">Pl</th>
+						<th class="text-center hide-md">Pl</th>
 						<th class="text-center">W</th>
 						<th class="text-center">D</th>
 						<th class="text-center">L</th>
-						<th class="text-center">GD</th>
+						<th class="text-center hide-md">GD</th>
 						<th class="text-center">PTS</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr [class.panel-item]="i % 2" [class.panel-item-alt]="i % 2" *ngFor="let club of league.clubs; let i = index;">
-						<td>{{i + 1}}</td>
+					<tr class="club" [class.panel-item-alt]="i % 2" [class.first]="i === 0" [class.last]="i === league.clubs.length -1"
+						[routerLink]="['/club', club.id]" *ngFor="let club of league.clubs; let i = index;">
+						<td class="hide-md">{{i + 1}}</td>
 						<td>
 							<club-logo [id]="club.logo"></club-logo> {{club.name}}
 						</td>
-						<td class="text-center">{{league.round}}</td>
+						<td class="text-center hide-md">{{league.round}}</td>
 						<td class="text-center">{{club.wins}}</td>
 						<td class="text-center">{{club.draws}}</td>
 						<td class="text-center">{{club.losses}}</td>
-						<td class="text-center">{{club.gf - club.ga}}</td>
+						<td class="text-center hide-md">{{club.gf - club.ga}}</td>
 						<td class="text-center b">{{club.points}}</td>
 					</tr>
 				</tbody>

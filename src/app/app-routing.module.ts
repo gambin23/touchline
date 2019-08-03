@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginPage } from './pages/login/login.page';
-import { HomePage } from './pages/home/home.page';
 import { AuthenticatedGuard } from './guards/authenticated.guard';
 import { TacticsPage } from './pages/tactics/tactics.page';
 import { PlayersPage } from './pages/players/players.page';
-import { PlayerPage } from './pages/player/player.page';
+import { PlayerPage } from './pages/player/ui/player.page';
 import { SettingsPage } from './pages/settings/settings.page';
 import { LeaguePage } from './pages/league/ui/league.page';
-
+import { ClubPage } from './pages/club/ui/club.page';
 
 const routes: Routes = [
 	{
@@ -22,7 +21,7 @@ const routes: Routes = [
 	},
 	{
 		path: 'home',
-		component: HomePage,
+		component: ClubPage,
 		canActivate: [AuthenticatedGuard]
 	},
 	{
@@ -38,6 +37,11 @@ const routes: Routes = [
 	{
 		path: 'league/:id',
 		component: LeaguePage,
+		canActivate: [AuthenticatedGuard]
+	},
+	{
+		path: 'club/:id',
+		component: ClubPage,
 		canActivate: [AuthenticatedGuard]
 	},
 	{

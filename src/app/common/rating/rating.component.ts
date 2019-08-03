@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Size } from 'src/app/ui/ui.model';
 
 @Component({
 	selector: 'rating',
@@ -9,6 +10,7 @@ export class RatingComponent implements OnInit {
 	@Input() name: string;
 	@Input() value: number;
 	@Input() alt?: boolean;
+	@Input() size: Size;
 
 	percent: number;
 	tooltip: string;

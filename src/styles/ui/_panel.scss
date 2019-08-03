@@ -27,7 +27,7 @@
 }
 
 .panel-content {
-    background: rgba($black, 0.35);
+    background: rgba($dark, 0.5);
 }
 
 .panel-att {
@@ -40,5 +40,5 @@
 
 .panel-item-alt {
     @extend .panel-item;
-    background: rgba($black, 0.25);
+    background: rgba($black, 0.35);
 }

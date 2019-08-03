@@ -6,18 +6,18 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './pages/navigation/navigation.component';
-import { HomePage } from './pages/home/home.page';
 import { LoginPage } from './pages/login/login.page';
 import { UiModule } from './ui/ui.module';
 import { ServicesModule } from './services/services.module';
 import { AuthenticatedGuard } from './guards/authenticated.guard';
 import { PlayersPage } from './pages/players/players.page';
-import { PlayerPage } from './pages/player/player.page';
 import { CommonModule } from './common/common.module';
 import { TacticsPage } from './pages/tactics/tactics.page';
 import { SettingsPage } from './pages/settings/settings.page';
 import { SettingsBackgroundComponent } from './pages/settings/background/background.component';
 import { LeagueModule } from './pages/league/league.module';
+import { PlayerModule } from './pages/player/player.module';
+import { ClubModule } from './pages/club/club.module';
 
 @NgModule({
 	imports: [
@@ -28,17 +28,16 @@ import { LeagueModule } from './pages/league/league.module';
 		ServicesModule,
 		CommonModule,
 		DragDropModule,
-
-		LeagueModule
+		LeagueModule,
+		ClubModule,
+		PlayerModule
 	],
 	declarations: [
 		AppComponent,
 		NavigationComponent,
 		LoginPage,
-		HomePage,
 		PlayersPage,
 		TacticsPage,
-		PlayerPage,
 		SettingsPage,
 		SettingsBackgroundComponent
 	],

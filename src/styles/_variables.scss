@@ -32,6 +32,8 @@ $font-xs: 10px;
     src: url(/styles/fonts/default.ttf);
 }
 
+$sidebar-width: 250px;
+
 @keyframes bounce {
     0% {
         transform: scale(0.1);

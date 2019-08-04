@@ -1,5 +1,6 @@
 $primary: #099999;
 $dark: #2a323a;
+$accent: greenyellow;
 $light: #ffffff;
 $black: #000000;
 $white: #ffffff;
@@ -33,6 +34,12 @@ $font-xs: 10px;
 }
 
 $sidebar-width: 250px;
+
+truncate {
+    white-space: nowrap!important;
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+}
 
 @keyframes bounce {
     0% {

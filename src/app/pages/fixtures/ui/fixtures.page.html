@@ -1,0 +1,21 @@
+<panel name="Fixtures" [collapsible]="false">
+	<div *ngIf="!fixtures$|async">
+		loading...
+	</div>
+	<div class="panel-title-alt" *ngIf="fixtures$|async; let fixtures" [routerLink]="['/club', fixtures.club.id]">
+		<club-logo class="mr-3" [id]="fixtures.club.logo"></club-logo>
+		{{fixtures.club.name}}
+	</div>
+</panel>
+
+<div *ngIf="fixtures$|async; let fixtures">
+	<panel name="Live" *ngIf="fixtures.inProgress">
+		<fixture-list [matches]="[fixtures.inProgress]" [showDate]="true"></fixture-list>
+	</panel>
+	<panel name="Future Matches" *ngIf="fixtures.futureMatches.length > 0">
+		<fixture-list [matches]="fixtures.futureMatches" [showDate]="true"></fixture-list>
+	</panel>
+	<panel name="Played Matches" *ngIf="fixtures.playedMatches.length > 0">
+		<fixture-list [matches]="fixtures.playedMatches"></fixture-list>
+	</panel>
+</div>

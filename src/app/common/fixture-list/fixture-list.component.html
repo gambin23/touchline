@@ -1,0 +1,23 @@
+<ul class="list-alt" *ngFor="let match of matches">
+    <div *ngIf="showDate" class="date">{{match.date | date:'EEEE, d MMMM yyyy' | uppercase }}</div>
+    <li class="list-item-alt">
+        <div class="list-item-alt-icon" (click)="toggleFavourite(match)">
+            <i class="fa-star" [class.fa]="isFavourite(match)" [class.far]="!isFavourite(match)"></i>
+        </div>
+        <div class="list-item-alt-content fixture">
+            <club-logo [id]="match.homeClub.id"></club-logo>
+            <span class="f-team h">{{match.homeClub.name}}</span>
+
+            <span *ngIf="matchStatus(match) === 'played'">{{match.homeScore}} - {{match.awayScore}}</span>
+            <span class="in-progress" *ngIf="matchStatus(match) === 'inProgress'">{{match.homeScore}} - {{match.awayScore}}</span>
+            <span *ngIf="matchStatus(match) === 'notPlayed'">{{match.date | date: 'HH:mm'}}</span>
+
+            <span class="f-team a">{{match.awayClub.name}}</span>
+            <club-logo [id]="match.awayClub.id"></club-logo>
+
+            <span class="in-progress" *ngIf="matchStatus(match) === 'inProgress'">LIVE</span>
+            <span *ngIf="matchStatus(match) === 'played'">FT</span>
+            <i class="fa fa-clock" *ngIf="matchStatus(match) === 'notPlayed'"></i>
+        </div>
+    </li>
+</ul>

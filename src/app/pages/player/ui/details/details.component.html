@@ -1,17 +1,21 @@
 <ng-container *ngIf="player">
 	<div class="row">
 		<div class="col-md-4">
-			<panel name="Details" [collapsible]="false">
+			<panel name="Estimated value" [collapsible]="false">
 				<ul class="list">
 					<li class="list-item active font-size">
-						<h4 class="p-0">€ {{player.value | number}}</h4>
+						<h4 class="p-0"><span  style="padding: 0 5px; margin-right: 10px;">€</span> {{player.value | number}}</h4>
 					</li>
 					<li class="list-item text-uppercase">
 						<club-logo id="4" class="mr-3"></club-logo>
 						{{player.clubName}}
 					</li>
+				</ul>
+			</panel>
+			<panel name="Details">
+				<ul class="list">
 					<li class="list-item">
-						<flag iconName="england" class="mr-3"></flag>
+						<flag [id]="player.countryId" class="mr-3"></flag>
 						{{player.countryId | country}}
 					</li>
 					<li class="list-item">
@@ -20,15 +24,15 @@
 					<li class="list-item">
 						Contracted {{player.contractLength}} seasons
 					</li>
+					<li class="list-item">
+						{{player.height}} cm / {{player.weight}} kg
+					</li>
 				</ul>
 			</panel>
 			<panel name="Condition">
 				<div class="panel-item b p-4">
 					<fitness [value]="player.fitness" [showText]="true" size="L"></fitness>
 				</div>
-			</panel>
-			<panel name="Position" class="d-none d-lg-block">
-				<img src="../../../assets/images/pitch_2.svg" style="width: 100%" />
 			</panel>
 		</div>
 

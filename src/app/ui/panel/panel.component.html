@@ -1,7 +1,7 @@
 <div class="panel">
-	<div class="panel-title" (click)="togglePanel()">
+	<div class="panel-title">
 		<span [innerHTML]="name"></span>
-		<div *ngIf="collapsible" class="panel-nav">
+		<div *ngIf="collapsible" class="panel-nav" (click)="togglePanel()">
 			<i class="fa" [class.fa-caret-up]="!hidePanel" [class.fa-caret-down]="hidePanel"></i>
 		</div>
 	</div>

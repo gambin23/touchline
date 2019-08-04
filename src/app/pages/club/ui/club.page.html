@@ -13,7 +13,7 @@
                     </div>
                     <div class="p-4 text-center">
                         <h5>
-                            <flag iconName="england" size="S"></flag> {{club.league?.name}}
+                            <flag [id]="club.countryId" size="S"></flag> {{club.league?.name}}
                         </h5>
                         <h5>Estimated Value</h5>
                         <h6><b>€ {{club.estimatedValue | number}}</b></h6>
@@ -31,10 +31,11 @@
                 <h5 class="panel-title-alt text-uppercase m-0">{{club.manager?.username}}</h5>
                 <p>{{club.manager?.name}} {{club.manager?.surname}}</p>
             </panel>
+            <panel name="Fixtures">
+                <fixture-list [matches]="fixtures(club)"></fixture-list>
+            </panel>
             <panel name="Key Players">
-                <div *ngFor="let player of keyPlayers(club.players)">
-                    <player-bar [player]="player"></player-bar>
-                </div>
+                <player-list [players]="keyPlayers(club.players)" [tooltip]="true" [teamRating]="false"></player-list>
             </panel>
         </div>
     </div>

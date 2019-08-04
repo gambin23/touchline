@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { Size } from '../../ui/ui.model';
+import { COUNTRIES } from './flag.model';
 
 @Component({
 	selector: 'flag',
@@ -8,7 +9,7 @@ import { Size } from '../../ui/ui.model';
 	styleUrls: ['./flag.component.scss']
 })
 export class FlagComponent implements OnInit {
-	@Input() code?: string;
+	@Input() id?: string;
 	@Input() iconName?: string;
 	@Input() size: Size;
 
@@ -19,9 +20,10 @@ export class FlagComponent implements OnInit {
 			this.value = this.iconName;
 		}
 
-		if (this.code) {
-			this.value = this.code;
+		if (this.id) {
+			this.value = COUNTRIES[this.id];
 		}
+
 		switch (this.size) {
 			case 'S':
 				this.dimension = 32;

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { orderBy } from 'lodash';
 
-import { Player, PlayingPosition } from '../../../models/models.index';
+import { Player, PlayingPosition } from '../../../models/index';
 
 @Injectable()
 export class TacticsService {

@@ -1,0 +1,37 @@
+@import '_variables';
+
+
+.fixture {
+    justify-content: space-between;
+}
+
+.f-team {
+    @extend truncate;
+    width: 100px;
+    display: inline-block;
+
+    &.h {
+        text-align: right !important;
+    }
+
+    &.a {
+        text-align: left;
+    }
+}
+
+.in-progress {
+    color: $accent;
+    font-weight: bold;
+}
+
+.date {
+    display: block !important;
+    width: 100%;
+    background: rgba($black, 0.75);
+    padding: 15px 25px;
+    margin-top: 4px;
+    margin-bottom: -4px;
+    text-align: right;
+
+
+}

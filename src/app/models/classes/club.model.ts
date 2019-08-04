@@ -3,6 +3,7 @@ import { Tactic } from '../enums/tactic.enum';
 import { Player } from './player.model';
 import { Match } from './match.model';
 import { Manager } from './manager.model';
+import { League } from './league.model';
 
 export interface Club {
     id: number,
@@ -26,6 +27,7 @@ export interface Club {
     tactic: Tactic,
     logo: number,
     manager: Manager,
+    league: League,
     players: Player[],
     homeMatches: Match[],
     awayMatches: Match[]

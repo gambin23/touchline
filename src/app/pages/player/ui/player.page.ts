@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 
 import { PlayerService } from '../sdk/player.service';
-import { Player, PlayerPosition } from '../../../models/models.index';
+import { Player, PlayerPosition } from '../../../models/index';
 
 @Component({
 	selector: 'player-page',

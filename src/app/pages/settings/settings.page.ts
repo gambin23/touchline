@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { User } from '../../models/models.index';
+import { User } from '../../models/index';
 import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({

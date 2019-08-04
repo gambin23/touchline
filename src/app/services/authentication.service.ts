@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 
-import { User } from '../models/models.index';
+import { User } from '../models/index';
 
 @Injectable()
 export class AuthenticationService {

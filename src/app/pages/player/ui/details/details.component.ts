@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Player } from '../../../../models/models.index';
+import { Player } from '../../../../models/index';
 
 @Component({
 	selector: 'player-details',

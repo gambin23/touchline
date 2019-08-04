@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Player, PlayerPosition } from '../../models/models.index';
+import { Player, PlayerPosition } from '../../models/index';
 
 @Component({
 	selector: 'player-bar',

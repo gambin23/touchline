@@ -22,9 +22,8 @@
     padding: 16px 0;
     font-size: $font-l !important;
     text-align: center;
-    margin: 0;
     background-color: $primary;
-    border-bottom: 3px solid $primary;
+    border: 1px solid $primary;
 }
 
 #menu {
@@ -34,7 +33,6 @@
 .sidebar-content {
     display: flex;
     flex-direction: column;
-
     flex: 1 1 auto;
     overflow-y: auto;
 }

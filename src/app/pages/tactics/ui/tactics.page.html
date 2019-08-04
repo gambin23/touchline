@@ -20,7 +20,7 @@
 						<player-image [id]="player.avatar" size="M" class="s11-avatar"></player-image>
 						<div class="s11-num">{{player.shirtNumber}}</div>
 						<span class="s11-name">
-							{{player.name|slice:0:1}}. {{player.surname|slice:0:7}}<span *ngIf="player.surname.length > 7">&hellip;</span>
+							{{player.name|slice:0:1}}. {{player.surname|truncate:[7]}}
 						</span>
 						<rating-team-player class="s11-rating" [team]="players" [player]="player"></rating-team-player>
 					</div>

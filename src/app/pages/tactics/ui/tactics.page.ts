@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 import { orderBy, cloneDeep } from 'lodash';
 
 import { PlayersService } from '../../../services/players.service';
-import { Player, PlayerPosition } from '../../../models/models.index';
+import { Player, PlayerPosition } from '../../../models/index';
 import { TacticsService } from '../sdk/tactics.service';
 
 @Component({

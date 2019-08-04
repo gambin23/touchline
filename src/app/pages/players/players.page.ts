@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { PlayersService } from '../../services/players.service';
-import { Player, PlayerPosition } from '../../models/models.index';
+import { Player, PlayerPosition } from '../../models/index';
 
 @Component({
 	selector: 'players-page',

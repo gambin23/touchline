@@ -5,7 +5,7 @@ export interface Player {
 	id: number;
 	clubId?: number;
 	clubName?: string;
-	countryId: number;
+	countryId: string;
 	name: string;
 	surname: string;
 	shirtNumber: number;

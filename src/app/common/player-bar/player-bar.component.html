@@ -1,13 +1,17 @@
-<div class="player" [routerLink]="link && ['/player', player.id]">
-    <div class="player-details">
-        <span class="player-pos">{{positions[player.position]}}</span>
-        <flag iconName="england" class="player-flag"></flag>
-        <span class="player-no">{{player.shirtNumber}}.</span>
-        {{player.name}} {{player.surname}}
-        <player-tooltip *ngIf="tooltip" class="player-tooltip" [player]="player"></player-tooltip>
+<li class="list-item-alt" [routerLink]="link && ['/player', player.id]">
+    <div class="list-item-alt-icon">
+        <span>{{positions[player.position]}}</span>
     </div>
-    <div class="player-stats">
-        <rating-team-player *ngIf="team" [player]="player" [team]="team"></rating-team-player>
-        <fitness [value]="player.fitness"></fitness>
+    <div class="list-item-alt-content player">
+        <div class="player-details">
+            <span class="player-no">{{player.shirtNumber}}.</span>
+            {{player.name}} {{player.surname}}
+            <player-tooltip *ngIf="tooltip" class="player-tooltip" [player]="player"></player-tooltip>
+        </div>
+        <div class="player-stats">
+            <rating-team-player *ngIf="team" [player]="player" [team]="team"></rating-team-player>
+            <flag [id]="player.countryId" class="player-flag"></flag>
+            <fitness [value]="player.fitness"></fitness>
+        </div>
     </div>
-</div>
+</li>

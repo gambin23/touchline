@@ -8,6 +8,7 @@ import { PlayerPage } from './pages/player/ui/player.page';
 import { SettingsPage } from './pages/settings/settings.page';
 import { LeaguePage } from './pages/league/ui/league.page';
 import { ClubPage } from './pages/club/ui/club.page';
+import { FixturesPage } from './pages/fixtures/ui/fixtures.page';
 
 const routes: Routes = [
 	{
@@ -35,6 +36,11 @@ const routes: Routes = [
 		canActivate: [AuthenticatedGuard]
 	},
 	{
+		path: 'fixtures',
+		component: FixturesPage,
+		canActivate: [AuthenticatedGuard]
+	},
+	{
 		path: 'league/:id',
 		component: LeaguePage,
 		canActivate: [AuthenticatedGuard]
@@ -42,6 +48,11 @@ const routes: Routes = [
 	{
 		path: 'club/:id',
 		component: ClubPage,
+		canActivate: [AuthenticatedGuard]
+	},
+	{
+		path: 'club/:id/fixtures',
+		component: FixturesPage,
 		canActivate: [AuthenticatedGuard]
 	},
 	{

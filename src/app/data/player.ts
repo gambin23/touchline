@@ -1,10 +1,10 @@
-import { League, Club, Player, Tactic, Color, PlayingPosition, PlayerPosition } from '../models/models.index';
+import { Player, PlayingPosition, PlayerPosition } from '../models/index';
 
 export const PLAYER: Player = {
 	id: 1,
 	clubId: 1001,
 	clubName: 'Boston City FC',
-	countryId: 1,
+	countryId: "mt",
 	name: 'Massimo',
 	surname: 'Truzzi',
 	shirtNumber: 10,
@@ -63,75 +63,4 @@ export const PLAYERS: Player[] = [
 	{ ...PLAYER, id: 23, name: 'Alex', surname: 'Cauchi', shirtNumber: 76, position: PlayerPosition.ST, playingPosition: PlayingPosition.NoPosition, value: 20000 },
 	{ ...PLAYER, id: 24, name: 'Norbert', surname: 'Borg', shirtNumber: 44, position: PlayerPosition.RM, playingPosition: PlayingPosition.NoPosition, value: 30000 }
 ]
-
-export const CLUB: Club = {
-	id: 1,
-	countryId: "mt",
-	leagueId: 1,
-	name: "Boston City FC",
-	acronym: 'BCFC',
-	stadium: 'Boston Stadium',
-	color1: Color.Teal,
-	color2: Color.White,
-	balance: 5000000,
-	salaries: 2500000,
-	estimatedValue: 15000000,
-	wins: 9,
-	draws: 3,
-	losses: 4,
-	gf: 50,
-	ga: 11,
-	tactic: Tactic.FourFourTwo,
-	logo: 5,
-	players: PLAYERS,
-	homeMatches: [],
-	awayMatches: [],
-	manager: {
-		name: 'Gilbert',
-		surname: 'Gambin',
-		username: 'Gambin17',
-		clubId: 1
-	}
-}
-
-export const CLUBS: Club[] = [
-	CLUB, CLUB, CLUB, CLUB, CLUB, CLUB, CLUB, CLUB,
-	{
-		...CLUB, ...{
-			id: 2,
-			logo: 2,
-			name: 'AS Vesuvio',
-			manager: {
-				username: 'Derek1',
-				name: 'Derek',
-				surname: 'Micallef',
-				clubId: 2
-			}
-		}
-	}, {
-		...CLUB, ...{
-			id: 3,
-			logo: 1,
-			name: 'Dingli Swallows',
-			manager: {
-				username: 'ChrisS',
-				name: 'Chris',
-				surname: 'Said',
-				clubId: 3
-			}
-		}
-	}]
-
-export const LEAGUE: League = {
-	id: 1,
-	countryId: "mt",
-	name: "English Premier League",
-	season: 1,
-	round: 5,
-	tier: 2,
-	clubs: CLUBS,
-	matches: []
-}
-
-
 

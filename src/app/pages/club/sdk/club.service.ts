@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { orderBy } from 'lodash';
 
-import { CLUBS } from '../../../services/data';
-import { Club, Player } from '../../../models/models.index';
+import { Club, Player, Match } from '../../../models';
+import { CLUBS } from '../../../data';
 
 @Injectable()
 export class ClubService {
@@ -15,5 +15,9 @@ export class ClubService {
 
     keyPlayers(players: Player[]): Player[] {
         return orderBy(players, p => p.value, "desc").slice(0, 5);
+    }
+
+    fixtures(club: Club): Match[] {
+        return [...club.homeMatches, ...club.awayMatches];
     }
 }

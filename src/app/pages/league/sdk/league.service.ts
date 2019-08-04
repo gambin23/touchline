@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { orderBy } from 'lodash';
 
-import { LEAGUE } from '../../../services/data';
-import { Player, League } from '../../../models/models.index';
+import { Player, League } from '../../../models/index';
+import { LEAGUE } from '../../../data';
 
 @Injectable()
 export class LeagueService {

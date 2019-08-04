@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 
-import { Club, Player } from '../../../models/models.index';
+import { Club, Player } from '../../../models/index';
 import { ClubService } from '../sdk/club.service';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
@@ -39,5 +39,9 @@ export class ClubPage implements OnInit, OnDestroy {
 
 	keyPlayers(players: Player[]) {
 		return this.clubService.keyPlayers(players);
+	}
+
+	fixtures(club: Club) {
+		return this.clubService.fixtures(club);
 	}
 }

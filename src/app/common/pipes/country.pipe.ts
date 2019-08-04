@@ -11,6 +11,10 @@ export class CountryPipe implements PipeTransform {
 		name: 'United Kingdom'
 	},
 	{
+		iso2: 'gb-1',
+		name: 'England'
+	},
+	{
 		iso2: 'es',
 		name: 'Spain'
 	},
@@ -22,7 +26,8 @@ export class CountryPipe implements PipeTransform {
 		iso2: 'fr',
 		name: 'France'
 	}];
+
 	transform(code: string): string {
-		return this.countries[code].name;
+		return this.countries.find(c => c.iso2 === code).name;
 	}
 }

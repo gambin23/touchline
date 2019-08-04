@@ -7,9 +7,7 @@
 		</div>
 	</div>
 	<ng-container *ngIf="activeView === 'list'">
-		<div [routerLink]="['/player', player.id]" *ngFor="let player of players$|async">
-			<player-bar [player]="player" [tooltip]="true" [team]="players$|async"></player-bar>
-		</div>
+		<player-list [players]="players$|async" [tooltip]="true"></player-list>
 	</ng-container>
 	<ng-container *ngIf="activeView === 'grid'">
 		<div class="grid-player" [routerLink]="['/player', player.id]" [class.alt]="i % 2" *ngFor="let player of players$|async; let i = index">

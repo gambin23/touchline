@@ -3,11 +3,11 @@ import { Component, Input } from '@angular/core';
 import { Player } from '../../../../models/index';
 
 @Component({
-	selector: 'player-details',
-	templateUrl: './details.component.html',
-	styleUrls: ['./details.component.scss']
+	selector: 'player-stats',
+	templateUrl: './stats.component.html',
+	styleUrls: ['./stats.component.scss']
 })
-export class PlayerDetailsComponent {
+export class PlayerStatsComponent {
 
 	constructor() { }
 

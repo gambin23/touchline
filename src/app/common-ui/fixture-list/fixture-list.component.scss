@@ -35,3 +35,9 @@
 
 
 }
+
+.list-item-alt-content:hover {
+    & span {
+        color: $white !important;
+    }
+}

@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 
+import { Api } from '../../../common-sdk';
+
 import { PlayerService } from '../sdk/player.service';
 import { Player, PlayerPosition } from '../../../models/index';
 
@@ -18,7 +20,7 @@ export class PlayerPage implements OnInit, OnDestroy {
 	) { }
 
 	subscription = new Subscription();
-	player$: Observable<Player>;
+	player$: Observable<Api<Player>>;
 	positions = PlayerPosition;
 
 	ngOnInit() {

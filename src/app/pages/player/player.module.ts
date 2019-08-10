@@ -7,7 +7,7 @@ import { CommonUiModule } from '../../common-ui';
 import { CommonSdkModule } from '../../common-sdk';
 
 import { PlayerPage } from './ui/player.page';
-import { PlayerDetailsComponent } from './ui/details/details.component';
+import { PlayerStatsComponent } from './ui/stats/stats.component';
 import { PlayerService } from './sdk/player.service';
 
 @NgModule({
@@ -20,11 +20,11 @@ import { PlayerService } from './sdk/player.service';
     ],
     declarations: [
         PlayerPage,
-        PlayerDetailsComponent
+        PlayerStatsComponent
     ],
     exports: [
         PlayerPage,
-        PlayerDetailsComponent
+        PlayerStatsComponent
     ],
     providers: [PlayerService]
 })

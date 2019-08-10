@@ -1,34 +1,30 @@
 @import '_variables';
 
 .player-banner {
-    margin-top: 25px;
-    width: 100%;
-    padding: 30px;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 25px;
+    background-color: rgba($dark, 0.75);
+    border: 2px solid $dark;
+}
+
+.player-header {
+    min-height: 250px;
     display: flex;
     justify-content: space-between;
-    background-color: rgba($primary, 0.45);
-    border: 2px solid $primary;
-    z-index: -999;
-    height: 225px;
+    align-items: center;
+    padding: 25px;
+    width: 100%;
+    background-color: rgba($dark, 0.75);
 }
 
 .player-number {
     font-family: $font-highlight;
     font-size: 160px;
     font-style: italic;
-    color: mix($primary,white);
+    color: mix($dark, white);
     line-height: 160px;
     padding: 0 25px;
-
-    @media only screen and (max-width: 768px) {
-        display: none;
-    }
 }
-
-.player-header {
-    padding: 0 25px;
-    display: flex;
-    align-items: center;
-}
-
-

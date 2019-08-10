@@ -1,21 +1,22 @@
-<panel name="Fixtures" [collapsible]="false">
-	<div *ngIf="!fixtures$|async">
-		loading...
-	</div>
-	<div class="panel-title-alt" *ngIf="fixtures$|async; let fixtures" [routerLink]="['/club', fixtures.club.id]">
-		<club-logo class="mr-3" [id]="fixtures.club.logo"></club-logo>
-		{{fixtures.club.name}}
-	</div>
-</panel>
-
-<div *ngIf="fixtures$|async; let fixtures">
-	<panel name="Live" *ngIf="fixtures.inProgress">
-		<fixture-list [matches]="[fixtures.inProgress]" [showDate]="true"></fixture-list>
+<ng-container *ngIf="fixtures$|async; let model">
+	 <panel name="Fixtures" [collapsible]="false" [loading]="model.loading" [error]="model.error">
+		<div class="panel-title-alt" [routerLink]="['/club', model.data?.club.id]">
+			<club-logo class="mr-3" [id]="model.data?.club.logo"></club-logo>
+			{{model.data?.club.name}}
+		</div>
 	</panel>
-	<panel name="Future Matches" *ngIf="fixtures.futureMatches.length > 0">
-		<fixture-list [matches]="fixtures.futureMatches" [showDate]="true"></fixture-list>
-	</panel>
-	<panel name="Played Matches" *ngIf="fixtures.playedMatches.length > 0">
-		<fixture-list [matches]="fixtures.playedMatches"></fixture-list>
-	</panel>
-</div>
+	<ng-container *ngIf="model.data; let fixtures">
+		<panel name="Live">
+			<fixture-list *ngIf="fixtures.inProgress" [matches]="[fixtures.inProgress]" [showDate]="true"></fixture-list>
+			<p class="panel-item" *ngIf="!fixtures?.inProgress">There are no ongoing matches.</p>
+		</panel>
+		<panel name="Future Matches">
+			<fixture-list *ngIf="fixtures.futureMatches.length > 0" [matches]="fixtures.futureMatches" [showDate]="true"></fixture-list>
+			<p class="panel-item" *ngIf="fixtures.futureMatches.length === 0">No matches to display.</p>
+		</panel>
+		<panel name="Played Matches">
+			<fixture-list *ngIf="fixtures.playedMatches.length > 0" [matches]="fixtures.playedMatches"></fixture-list>
+			<p class="panel-item" *ngIf="fixtures.playedMatches.length === 0">No matches to display.</p>
+		</panel>
+	</ng-container>
+</ng-container>

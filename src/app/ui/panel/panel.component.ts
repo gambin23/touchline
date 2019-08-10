@@ -9,6 +9,8 @@ export class PanelComponent {
 	@Input() padding = false;
 	@Input() hidePanel = false;
 	@Input() collapsible = true;
+	@Input() loading = false;
+	@Input() error: string;
 
 	togglePanel() {
 		if (this.collapsible) {

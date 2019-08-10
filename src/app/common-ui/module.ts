@@ -2,12 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule as AngularCommonModule } from '@angular/common';
 
 import { UiModule } from '../ui/ui.module';
+import { CommonSdkModule } from '../common-sdk';
 
-import { CountryPipe } from './pipes/country.pipe';
-import { TruncatePipe } from './pipes/truncate.pipe';
-
-import { ClubLogoComponent } from '../common/club-logo/club-logo.component';
-import { FlagComponent } from '../common/flag/flag.component';
+import { ClubLogoComponent } from './club-logo/club-logo.component';
+import { FlagComponent } from './flag/flag.component';
 import { PlayerImageComponent } from './player-image/player-image.component';
 import { RatingComponent } from './rating/rating.component';
 import { FitnessComponent } from './fitness/fitness.component';
@@ -22,11 +20,10 @@ import { PlayerListComponent } from './player-list/player-list.component';
 	imports: [
 		AngularCommonModule,
 		RouterModule,
+		CommonSdkModule,
 		UiModule
 	],
 	declarations: [
-		CountryPipe,
-		TruncatePipe,
 		ClubLogoComponent,
 		FlagComponent,
 		PlayerImageComponent,
@@ -39,8 +36,6 @@ import { PlayerListComponent } from './player-list/player-list.component';
 		PlayerListComponent
 	],
 	exports: [
-		CountryPipe,
-		TruncatePipe,
 		ClubLogoComponent,
 		FlagComponent,
 		PlayerImageComponent,
@@ -53,4 +48,4 @@ import { PlayerListComponent } from './player-list/player-list.component';
 		PlayerListComponent
 	]
 })
-export class CommonModule { }
+export class CommonUiModule { }

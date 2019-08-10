@@ -3,7 +3,8 @@ import { CommonModule as AngularCommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { UiModule } from '../../ui/ui.module';
-import { CommonModule } from '../../common/common.module';
+import { CommonUiModule } from '../../common-ui';
+import { CommonSdkModule } from '../../common-sdk';
 
 import { LeaguePage } from './ui/league.page';
 import { LeagueService } from './sdk/league.service';
@@ -12,7 +13,8 @@ import { LeagueService } from './sdk/league.service';
     imports: [
         AngularCommonModule,
         RouterModule,
-        CommonModule,
+        CommonUiModule,
+        CommonSdkModule,
         UiModule
     ],
     declarations: [

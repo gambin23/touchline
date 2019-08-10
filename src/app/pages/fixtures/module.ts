@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule as AngularCommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
 import { UiModule } from '../../ui/ui.module';
-import { CommonModule } from '../../common/common.module';
+import { CommonUiModule } from '../../common-ui';
+import { CommonSdkModule } from '../../common-sdk';
 
 import { FixturesPage } from './ui/fixtures.page';
 import { FixturesService } from './sdk/fixtures.service';
@@ -12,7 +12,8 @@ import { FixturesService } from './sdk/fixtures.service';
     imports: [
         AngularCommonModule,
         RouterModule,
-        CommonModule,
+        CommonUiModule,
+        CommonSdkModule,
         UiModule
     ],
     declarations: [

@@ -1,10 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Subscription, Observable } from 'rxjs';
 
+import { Api } from '../../../common-sdk';
+
 import { FixturesService } from '../sdk/fixtures.service';
-import { Player, Match, Club } from '../../../models/index';
-import { ActivatedRoute } from '@angular/router';
-import { AuthenticationService } from 'src/app/services/authentication.service';
+import { AuthenticationService } from '../../../services/authentication.service';
 import { FixturesViewModel } from '../sdk/fixtures.model';
 
 @Component({
@@ -21,7 +22,7 @@ export class FixturesPage implements OnInit, OnDestroy {
 	) { }
 
 	subscription = new Subscription();
-	fixtures$: Observable<FixturesViewModel>;
+	fixtures$: Observable<Api<FixturesViewModel>>;
 
 	ngOnInit() {
 		this.subscription.add(this.route.params.subscribe(params => {

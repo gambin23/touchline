@@ -5,9 +5,12 @@
 			<i class="fa" [class.fa-caret-up]="!hidePanel" [class.fa-caret-down]="hidePanel"></i>
 		</div>
 	</div>
-	<div class="panel-content" [class.collapse]="hidePanel">
-		<div [class.p-4]="padding">
+	<div class="panel-content" [class.collapse]="hidePanel" [class.loading]="loading">
+		<div [class.p-4]="padding" *ngIf="!loading && !error">
 			<ng-content></ng-content>
+		</div>
+		<div class="panel-item error" *ngIf="error">
+			{{error}}
 		</div>
 	</div>
 </div>

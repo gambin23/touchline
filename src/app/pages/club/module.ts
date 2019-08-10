@@ -3,7 +3,8 @@ import { CommonModule as AngularCommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { UiModule } from '../../ui/ui.module';
-import { CommonModule } from '../../common/common.module';
+import { CommonUiModule } from '../../common-ui';
+import { CommonSdkModule } from '../../common-sdk';
 
 import { ClubPage } from './ui/club.page';
 import { ClubService } from './sdk/club.service';
@@ -12,7 +13,8 @@ import { ClubService } from './sdk/club.service';
     imports: [
         AngularCommonModule,
         RouterModule,
-        CommonModule,
+        CommonUiModule,
+        CommonSdkModule,
         UiModule
     ],
     declarations: [

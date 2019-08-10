@@ -3,7 +3,8 @@ import { CommonModule as AngularCommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { UiModule } from '../../ui/ui.module';
-import { CommonModule } from '../../common/common.module';
+import { CommonUiModule } from '../../common-ui';
+import { CommonSdkModule } from '../../common-sdk';
 
 import { PlayerPage } from './ui/player.page';
 import { PlayerDetailsComponent } from './ui/details/details.component';
@@ -13,7 +14,8 @@ import { PlayerService } from './sdk/player.service';
     imports: [
         AngularCommonModule,
         RouterModule,
-        CommonModule,
+        CommonUiModule,
+        CommonSdkModule,
         UiModule
     ],
     declarations: [

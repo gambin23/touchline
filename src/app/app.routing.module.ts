@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginPage } from './pages/login/login.page';
-import { AuthenticatedGuard } from './guards/authenticated.guard';
+import { AuthenticatedGuard } from './common-sdk/guards/authenticated.guard';
 import { TacticsPage } from './pages/tactics/ui/tactics.page';
 import { PlayersPage } from './pages/players/players.page';
 import { PlayerPage } from './pages/player/ui/player.page';

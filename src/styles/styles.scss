@@ -12,6 +12,7 @@
 @import './ui/_gallery.scss';
 @import './ui/_scrollbar.scss';
 @import './ui/_select.scss';
+@import './ui/_loading.scss';
 
 body {
     min-height:100%;
@@ -71,14 +72,6 @@ span {
     font-family: $font-default;
 }
 
-.f-primary {
-    font-family: $font-primary;
-}
-
-.b {
-    font-weight: bold;
-}
-
 :focus {
     outline: 0;
 }
@@ -110,6 +103,24 @@ ul {
     list-style: none!important;
     margin: 0!important;
     padding: 0;
+}
+
+.f-primary {
+    font-family: $font-primary;
+}
+
+.b {
+    font-weight: bold;
+}
+
+.error {
+    color: $white;
+    background-color: rgba($error, 0.5)
+}
+
+.warning {
+    color: $white;
+    background-color: rgba($warning, 0.5)
 }
 
 @import "~bootstrap/scss/bootstrap";

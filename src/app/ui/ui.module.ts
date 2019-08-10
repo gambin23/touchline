@@ -6,6 +6,7 @@ import { TabComponent } from './tabs/tab.component';
 import { FooterComponent } from './footer/footer.component';
 import { PanelComponent } from './panel/panel.component';
 import { CircleProgressComponent } from './circle-progress/circle-progress.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
 	imports: [
@@ -16,14 +17,16 @@ import { CircleProgressComponent } from './circle-progress/circle-progress.compo
 		TabComponent,
 		FooterComponent,
 		PanelComponent,
-		CircleProgressComponent
+		CircleProgressComponent,
+		LoaderComponent
 	],
 	exports: [
 		TabsComponent,
 		TabComponent,
 		FooterComponent,
 		PanelComponent,
-		CircleProgressComponent
+		CircleProgressComponent,
+		LoaderComponent
 	]
 })
 export class UiModule { }

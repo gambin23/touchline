@@ -1,0 +1,52 @@
+@import '_variables.scss';
+
+.loader {
+    top: 35vh !important;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    animation: blink-animation 2s infinite;
+    -webkit-animation: blink-animation 2s infinite;
+
+    & h1 {
+        font-size: 46px !important;
+    }
+}
+
+@keyframes blink-animation {
+    10% {
+        opacity: 0.7
+    }
+
+    20% {
+        opacity: 0.5
+    }
+
+    30% {
+        opacity: 0.3
+    }
+
+    40% {
+        opacity: 0.1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    60% {
+        opacity: 0.1
+    }
+
+    70% {
+        opacity: 0.3
+    }
+
+    80% {
+        opacity: 0.5
+    }
+
+    100% {
+        opacity: 0.7
+    }
+}

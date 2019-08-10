@@ -1,7 +1,8 @@
 <ng-container *ngIf="club$|async; let model">
-    <div class="row">
+    <loader *ngIf="model.loading"></loader>
+    <div class="row" *ngIf="!model.loading">
         <div class="col-lg-4">
-            <panel name="Club Details" [collapsible]="false" [loading]="model.loading" [error]="model.error">
+            <panel name="Club Details" [collapsible]="false">
                 <ng-container *ngIf="model.data; let club">
                     <h5 class="panel-title-alt text-center text-uppercase m-0">{{club.name}}</h5>
                     <div class="panel-content">
@@ -18,7 +19,7 @@
                     </div>
                 </ng-container>
             </panel>
-            <panel name="Stadium" class="d-none d-lg-block" [loading]="model.loading" [error]="model.error">
+            <panel name="Stadium" class="d-none d-lg-block">
                 <ng-container *ngIf="model.data; let club">
                     <span class="stadium-name">{{club.stadium}}</span>
                     <img class="w-100" src="../../../assets/images/stadium.jpg" />
@@ -28,18 +29,18 @@
         </div>
 
         <div class="col-lg-8">
-            <panel name="Manager" [loading]="model.loading" [error]="model.error">
+            <panel name="Manager">
                 <ng-container *ngIf="model.data; let club">
                     <h5 class="panel-title-alt text-uppercase m-0">{{club.manager?.username}}</h5>
                     <p>{{club.manager?.name}} {{club.manager?.surname}}</p>
                 </ng-container>
             </panel>
-            <panel name="Fixtures" [loading]="model.loading" [error]="model.error">
+            <panel name="Fixtures">
                 <ng-container *ngIf="model.data; let club">
                     <fixture-list [matches]="fixtures(club)"></fixture-list>
                 </ng-container>
             </panel>
-            <panel name="Key Players" [loading]="model.loading" [error]="model.error">
+            <panel name="Key Players">
                 <ng-container *ngIf="model.data; let club">
                     <player-list [players]="keyPlayers(club.players)" [tooltip]="true" [teamRating]="false"></player-list>
                 </ng-container>

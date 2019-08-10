@@ -15,6 +15,7 @@ export class FlagComponent implements OnInit {
 
 	dimension: number;
 	value: string;
+
 	ngOnInit() {
 		if (this.iconName) {
 			this.value = this.iconName;

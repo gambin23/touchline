@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { orderBy, cloneDeep } from 'lodash';
+import { cloneDeep } from 'lodash';
 
-import { PlayersService } from '../../../services/players.service';
+
 import { Player, PlayerPosition } from '../../../models/index';
 import { TacticsService } from '../sdk/tactics.service';
 
@@ -12,21 +12,22 @@ import { TacticsService } from '../sdk/tactics.service';
 	styleUrls: ['./tactics.page.scss']
 })
 export class TacticsPage implements OnInit, OnDestroy {
-	constructor(
-		private playersService: PlayersService,
-		private tacticsService: TacticsService
-	) { }
+	constructor(private tacticsService: TacticsService) { }
 
 	subscription = new Subscription();
 	playerPositions = PlayerPosition;
 	players: Player[];
+	loading: boolean;
+	error: string;
 	initialSelection: Player[];
 	previousSelection: Player[][] = [];
 	selectedPlayer: Player;
 
 	ngOnInit() {
-		this.subscription.add(this.playersService.players$(1).subscribe(players => {
-			this.players = this.tacticsService.orderPlayers(players);
+		this.subscription.add(this.tacticsService.tactics$().subscribe(tactics => {
+			this.players = tactics.data;
+			this.loading = tactics.loading;
+			this.error = tactics.error;
 		}));
 	}
 
@@ -54,7 +55,7 @@ export class TacticsPage implements OnInit, OnDestroy {
 	}
 
 	save() {
-		console.log('saving players');
+		this.tacticsService.save();
 		this.previousSelection = [];
 	}
 

@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { User } from '../../models/index';
-import { AuthenticationService } from '../../services/authentication.service';
+import { User } from '../../../models/index';
+import { AuthenticationService } from '../../../common-sdk';
 
 @Component({
 	selector: 'settings-page',

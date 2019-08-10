@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { PlayersService } from '../../services/players.service';
-import { Player, PlayerPosition } from '../../models/index';
+import { Api } from '../../../common-sdk';
+import { Player, PlayerPosition } from '../../../models';
+
+import { PlayersService } from '../sdk/players.service';
 
 @Component({
 	selector: 'players-page',
@@ -12,7 +14,7 @@ import { Player, PlayerPosition } from '../../models/index';
 export class PlayersPage implements OnInit {
 	constructor(private playersService: PlayersService) { }
 
-	players$: Observable<Player[]>;
+	players$: Observable<Api<Player[]>>;
 	positions = PlayerPosition;
 	activeView: ListView = 'list';
 
@@ -24,7 +26,6 @@ export class PlayersPage implements OnInit {
 		this.activeView = view;
 	}
 }
-
 
 export type ListView = 'list' | 'grid';
 export type SortPlayer = 'value' | 'salary' | 'age' | 'shirt';

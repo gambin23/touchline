@@ -5,7 +5,7 @@ import { Subscription, Observable } from 'rxjs';
 import { Api } from '../../../common-sdk';
 
 import { FixturesService } from '../sdk/fixtures.service';
-import { AuthenticationService } from '../../../services/authentication.service';
+import { AuthenticationService } from '../../../common-sdk/authentication/authentication.service';
 import { FixturesViewModel } from '../sdk/fixtures.model';
 
 @Component({

@@ -14,8 +14,16 @@ export class ApiService {
     get$<T>(url: string, params?: HttpParams | { [param: string]: string | string[]; }, mock?: T): Observable<Api<T>> {
         return this.http.get(`${this.baseUrl}/${url}`, { params }).pipe(
             map((response: T) => { return { loading: false, data: mock ? mock : response } }),
-            catchError(error => of({ loading: false, error: 'Something went wrong' })),
-            startWith({ loading: true } as Api<T>)
+            catchError(() => of({ loading: false, error: 'Something went wrong' })),
+            startWith({ loading: true })
+        )
+    }
+
+    post$<T>(url: string, body: T, params?: HttpParams | { [param: string]: string | string[]; }, mock?: T): Observable<Api<T>> {
+        return this.http.post(`${this.baseUrl}/${url}`, body, { params }).pipe(
+            map((response: T) => { return { loading: false, data: mock ? mock : response } }),
+            catchError(() => of({ loading: false, error: 'Something went wrong' })),
+            startWith({ loading: true })
         )
     }
 }

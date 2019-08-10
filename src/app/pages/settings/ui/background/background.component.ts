@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/common-sdk/authentication/user.service';
 
 @Component({
 	selector: 'settings-background',

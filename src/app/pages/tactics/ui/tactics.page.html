@@ -1,5 +1,5 @@
-<panel name="Tactics" [collapsible]="false">
-	<div class="row">
+<panel name="Tactics" [collapsible]="false" [loading]="loading" [error]="error">
+	<div class="row" *ngIf="players">
 		<div class="col-lg-6 pr0">
 			<div id="starting-11">
 				<div id="actions">

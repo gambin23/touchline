@@ -1,20 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { orderBy } from 'lodash';
+
+import { ApiService, Api } from '../../../common-sdk';
 
 import { Player, League } from '../../../models/index';
 import { LEAGUE } from '../../../data';
 
 @Injectable()
 export class LeagueService {
-    constructor() { }
+    constructor(private api: ApiService) { }
 
-    league$(id: number): Observable<League> {
-        LEAGUE.clubs = orderBy(LEAGUE.clubs.map(club => {
-            club.points = club.wins * 3 + club.draws
-            return club;
-        }), [c => c.points, c => c.gf - c.ga]);
-        return of(LEAGUE);
+    league$(id: number): Observable<Api<League>> {
+        return this.api.get$<League>('people/1', null, LEAGUE);
+    }
+
+    leagueDetails(league: League): League {
+        return {
+            ...league, clubs: orderBy(league.clubs.map(club => {
+                club.points = club.wins * 3 + club.draws
+                return club;
+            }), [c => c.points, c => c.gf - c.ga])
+        };
     }
 
     topScorers(league: League) {

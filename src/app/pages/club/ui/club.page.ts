@@ -2,9 +2,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 
+import { Api, AuthenticationService } from '../../../common-sdk';
+
 import { Club, Player } from '../../../models/index';
 import { ClubService } from '../sdk/club.service';
-import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
 	selector: 'club-page',
@@ -19,7 +20,7 @@ export class ClubPage implements OnInit, OnDestroy {
 	) { }
 
 	subscription = new Subscription();
-	club$: Observable<Club>;
+	club$: Observable<Api<Club>>;
 
 	ngOnInit() {
 		this.subscription.add(this.route.params.subscribe(params => {

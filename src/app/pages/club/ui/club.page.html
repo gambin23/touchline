@@ -1,41 +1,48 @@
-<div *ngIf="!club$|async" class="loading">
-    loading...
-</div>
-
-<ng-container *ngIf="club$|async; let club">
+<ng-container *ngIf="club$|async; let model">
     <div class="row">
         <div class="col-lg-4">
-            <panel name="Club Details" [collapsible]="false">
-                <h5 class="panel-title-alt text-center text-uppercase m-0">{{club.name}}</h5>
-                <div class="panel-content">
-                    <div class="text-center">
-                        <club-logo [id]="club.logo" size="XL"></club-logo>
+            <panel name="Club Details" [collapsible]="false" [loading]="model.loading" [error]="model.error">
+                <ng-container *ngIf="model.data; let club">
+                    <h5 class="panel-title-alt text-center text-uppercase m-0">{{club.name}}</h5>
+                    <div class="panel-content">
+                        <div class="text-center">
+                            <club-logo [id]="club.logo" size="XL"></club-logo>
+                        </div>
+                        <div class="p-4 text-center">
+                            <h5>
+                                <flag [id]="club.countryId" size="S"></flag> {{club.league?.name}}
+                            </h5>
+                            <h5>Estimated Value</h5>
+                            <h6><b>€ {{club.estimatedValue | number}}</b></h6>
+                        </div>
                     </div>
-                    <div class="p-4 text-center">
-                        <h5>
-                            <flag [id]="club.countryId" size="S"></flag> {{club.league?.name}}
-                        </h5>
-                        <h5>Estimated Value</h5>
-                        <h6><b>€ {{club.estimatedValue | number}}</b></h6>
-                    </div>
-                </div>
+                </ng-container>
             </panel>
-            <panel name="Stadium" class="d-none d-lg-block">
-                <span class="stadium-name">{{club.stadium}}</span>
-                <img class="w-100" src="../../../assets/images/stadium.jpg" />
+            <panel name="Stadium" class="d-none d-lg-block" [loading]="model.loading" [error]="model.error">
+                <ng-container *ngIf="model.data; let club">
+                    <span class="stadium-name">{{club.stadium}}</span>
+                    <img class="w-100" src="../../../assets/images/stadium.jpg" />
+                </ng-container>
+
             </panel>
         </div>
 
         <div class="col-lg-8">
-            <panel name="Manager">
-                <h5 class="panel-title-alt text-uppercase m-0">{{club.manager?.username}}</h5>
-                <p>{{club.manager?.name}} {{club.manager?.surname}}</p>
+            <panel name="Manager" [loading]="model.loading" [error]="model.error">
+                <ng-container *ngIf="model.data; let club">
+                    <h5 class="panel-title-alt text-uppercase m-0">{{club.manager?.username}}</h5>
+                    <p>{{club.manager?.name}} {{club.manager?.surname}}</p>
+                </ng-container>
             </panel>
-            <panel name="Fixtures">
-                <fixture-list [matches]="fixtures(club)"></fixture-list>
+            <panel name="Fixtures" [loading]="model.loading" [error]="model.error">
+                <ng-container *ngIf="model.data; let club">
+                    <fixture-list [matches]="fixtures(club)"></fixture-list>
+                </ng-container>
             </panel>
-            <panel name="Key Players">
-                <player-list [players]="keyPlayers(club.players)" [tooltip]="true" [teamRating]="false"></player-list>
+            <panel name="Key Players" [loading]="model.loading" [error]="model.error">
+                <ng-container *ngIf="model.data; let club">
+                    <player-list [players]="keyPlayers(club.players)" [tooltip]="true" [teamRating]="false"></player-list>
+                </ng-container>
             </panel>
         </div>
     </div>

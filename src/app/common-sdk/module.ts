@@ -10,6 +10,8 @@ import { AuthenticatedGuard } from './guards/authenticated.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './api/api.service';
+import { AuthenticationService } from './authentication/authentication.service';
+import { UserService } from './authentication/user.service';
 
 @NgModule({
 	imports: [
@@ -29,7 +31,9 @@ import { ApiService } from './api/api.service';
 	],
 	providers: [
 		AuthenticatedGuard,
-		ApiService
+		ApiService,
+		AuthenticationService,
+		UserService
 	]
 })
 export class CommonSdkModule { }

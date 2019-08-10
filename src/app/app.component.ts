@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { AuthenticationService } from './services/authentication.service';
-import { UserService } from './services/user.service';
+import { UserService, AuthenticationService } from './common-sdk';
 
 @Component({
 	selector: 'app-root',
@@ -12,7 +11,7 @@ export class AppComponent implements OnInit {
 	constructor(
 		private authenticationService: AuthenticationService,
 		private userService: UserService
-		) {
+	) {
 	}
 
 	isAuthenticated$: Observable<boolean>;

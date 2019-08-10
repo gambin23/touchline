@@ -1,51 +1,49 @@
-<div *ngIf="!league">
-	loading...
-</div>
-
-<div *ngIf="league" class="row">
+<div class="row">
 	<div class="col-lg-8">
-		<panel name="League">
-			<div class="panel-title-alt">
-				<flag [id]="league.countryId" class="mr-3"></flag>
-				{{league.name}}
-			</div>
-			<table>
-				<thead class="panel-item-alt">
-					<tr>
-						<th class="hide-md">POS</th>
-						<th>CLUB</th>
-						<th class="text-center hide-md">Pl</th>
-						<th class="text-center">W</th>
-						<th class="text-center">D</th>
-						<th class="text-center">L</th>
-						<th class="text-center hide-md">GD</th>
-						<th class="text-center">PTS</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="club" [class.panel-item-alt]="i % 2" [class.first]="i === 0" [class.last]="i === league.clubs.length -1"
-						[routerLink]="['/club', club.id]" *ngFor="let club of league.clubs; let i = index;">
-						<td class="hide-md">{{i + 1}}</td>
-						<td>
-							<club-logo [id]="club.logo"></club-logo> {{club.name}}
-						</td>
-						<td class="text-center hide-md">{{league.round}}</td>
-						<td class="text-center">{{club.wins}}</td>
-						<td class="text-center">{{club.draws}}</td>
-						<td class="text-center">{{club.losses}}</td>
-						<td class="text-center hide-md">{{club.gf - club.ga}}</td>
-						<td class="text-center b">{{club.points}}</td>
-					</tr>
-				</tbody>
-			</table>
+		<panel name="League" [loading]="loading" [error]="error">
+			<ng-container *ngIf="league">
+				<div class="panel-title-alt">
+					<flag [id]="league.countryId" class="mr-3"></flag>
+					{{league.name}}
+				</div>
+				<table>
+					<thead class="panel-item-alt">
+						<tr>
+							<th class="hide-md">POS</th>
+							<th>CLUB</th>
+							<th class="text-center hide-md">Pl</th>
+							<th class="text-center">W</th>
+							<th class="text-center">D</th>
+							<th class="text-center">L</th>
+							<th class="text-center hide-md">GD</th>
+							<th class="text-center">PTS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="club" [class.panel-item-alt]="i % 2" [class.first]="i === 0" [class.last]="i === league.clubs.length -1"
+							[routerLink]="['/club', club.id]" *ngFor="let club of league.clubs; let i = index;">
+							<td class="hide-md">{{i + 1}}</td>
+							<td>
+								<club-logo [id]="club.logo"></club-logo> {{club.name}}
+							</td>
+							<td class="text-center hide-md">{{league.round}}</td>
+							<td class="text-center">{{club.wins}}</td>
+							<td class="text-center">{{club.draws}}</td>
+							<td class="text-center">{{club.losses}}</td>
+							<td class="text-center hide-md">{{club.gf - club.ga}}</td>
+							<td class="text-center b">{{club.points}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</ng-container>
 		</panel>
-		<panel name="Fixtures">
-			<p *ngIf="league.matches.length === 0" class="list-item">There are no fixtures to display.</p>
+		<panel name="Fixtures" [loading]="loading" [error]="error">
+			<p *ngIf="league?.matches.length === 0" class="list-item">There are no fixtures to display.</p>
 		</panel>
 	</div>
 
 	<div class="col-lg-4">
-		<panel name="Top Scorers">
+		<panel name="Top Scorers" [loading]="loading" [error]="error">
 			<p *ngIf="topScorers.length === 0" class="list-item">No goal scorers to display.</p>
 			<ng-container *ngIf="topScorers.length > 0">
 				<div class="list-item" [routerLink]="['/player', player.id]" [class.active]="i === 0" *ngFor="let player of topScorers; let i = index">
@@ -55,7 +53,7 @@
 				</div>
 			</ng-container>
 		</panel>
-		<panel name="Top Assists">
+		<panel name="Top Assists" [loading]="loading" [error]="error">
 			<p *ngIf="topAssists.length === 0" class="list-item">No assist men to display.</p>
 			<ng-container *ngIf="topAssists.length > 0">
 				<div class="list-item" [routerLink]="['/player', player.id]" [class.active]="i === 0" *ngFor="let player of topAssists; let i = index">

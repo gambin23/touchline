@@ -2,8 +2,8 @@ import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 
 @Injectable()
 export class UserService {
-	constructor(private _renderer: RendererFactory2) {
-		this.renderer = _renderer.createRenderer(null, null);
+	constructor(private rendererFactory: RendererFactory2) {
+		this.renderer = rendererFactory.createRenderer(null, null);
 	}
 
 	public renderer: Renderer2;

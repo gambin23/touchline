@@ -10,19 +10,19 @@ import { LeaguePage } from './ui/league.page';
 import { LeagueService } from './sdk/league.service';
 
 @NgModule({
-    imports: [
-        AngularCommonModule,
-        RouterModule,
-        CommonUiModule,
-        CommonSdkModule,
-        UiModule
-    ],
-    declarations: [
-        LeaguePage
-    ],
-    exports: [
-        LeaguePage
-    ],
-    providers: [LeagueService]
+	imports: [
+		AngularCommonModule,
+		RouterModule,
+		CommonUiModule,
+		CommonSdkModule,
+		UiModule
+	],
+	declarations: [
+		LeaguePage
+	],
+	exports: [
+		LeaguePage
+	],
+	providers: [LeagueService]
 })
 export class LeagueModule { }

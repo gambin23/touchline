@@ -14,17 +14,13 @@ export class LeaguePage implements OnInit, OnDestroy {
 	constructor(private leagueService: LeagueService) { }
 
 	subscription = new Subscription();
-	loading: boolean;
-	error: string;
 	league: League;
 	topScorers: Player[] = [];
 	topAssists: Player[] = [];
 
 	ngOnInit() {
 		this.subscription.add(this.leagueService.league$(1).subscribe(response => {
-			this.loading = response.loading;
-			this.error = response.error;
-			if(response.data) {
+			if (response.data) {
 				this.league = this.leagueService.leagueDetails(response.data);
 				this.topScorers = this.leagueService.topScorers(this.league);
 				this.topAssists = this.leagueService.topAssists(this.league);

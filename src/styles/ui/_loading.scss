@@ -5,28 +5,42 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    background-color: #ddd;
+    background-color: $dark;
 }
 
 .loading:before {
     display: block;
     position: absolute;
     content: "";
-    left: -200px;
-    width: 200px;
+    width: 0%;
     height: 5px;
     background-color: $primary;
     animation: loading 2s linear infinite;
 }
 
 @keyframes loading {
-    from {
-        left: -200px;
+    10% {
+        width: 10%;
+    }
+
+    20% {
+        width: 20%;
+    }
+
+    30% {
         width: 30%;
     }
 
+    40% {
+        width: 40%;
+    }
+
     50% {
-        width: 30%;
+        width: 50%;
+    }
+
+    60% {
+        width: 60%;
     }
 
     70% {
@@ -34,14 +48,14 @@
     }
 
     80% {
-        left: 50%;
+        width: 80%;
     }
 
-    95% {
-        left: 120%;
+    90% {
+        width: 90%;
     }
 
-    to {
-        left: 100%;
+    100% {
+        width: 100%;
     }
 }

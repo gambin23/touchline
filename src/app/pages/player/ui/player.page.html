@@ -1,5 +1,4 @@
 <ng-container *ngIf="player$|async; let model">
-	<loader [show]="model.loading"></loader>
 	<ng-container *ngIf="model.data; let player">
 		<div class="row mt-3">
 			<div class="col-sm-4">

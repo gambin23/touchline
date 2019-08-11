@@ -10,19 +10,19 @@ import { PlayersPage } from './ui/players.page';
 import { PlayersService } from './sdk/players.service';
 
 @NgModule({
-    imports: [
-        AngularCommonModule,
-        RouterModule,
-        CommonUiModule,
-        CommonSdkModule,
-        UiModule
-    ],
-    declarations: [
-        PlayersPage
-    ],
-    exports: [
-        PlayersPage
-    ],
-    providers: [PlayersService]
+	imports: [
+		AngularCommonModule,
+		RouterModule,
+		CommonUiModule,
+		CommonSdkModule,
+		UiModule
+	],
+	declarations: [
+		PlayersPage
+	],
+	exports: [
+		PlayersPage
+	],
+	providers: [PlayersService]
 })
 export class PlayersModule { }

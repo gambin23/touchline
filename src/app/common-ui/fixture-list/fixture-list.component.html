@@ -9,7 +9,7 @@
             <span class="f-team h">{{match.homeClub.name}}</span>
 
             <span *ngIf="matchStatus(match) === 'played'">{{match.homeScore}} - {{match.awayScore}}</span>
-            <span class="in-progress" *ngIf="matchStatus(match) === 'inProgress'">{{match.homeScore}} - {{match.awayScore}}</span>
+            <span class="score" *ngIf="matchStatus(match) === 'inProgress'">{{match.homeScore}} - {{match.awayScore}}</span>
             <span *ngIf="matchStatus(match) === 'notPlayed'">{{match.date | date: 'HH:mm'}}</span>
 
             <span class="f-team a">{{match.awayClub.name}}</span>

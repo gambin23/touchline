@@ -50,6 +50,12 @@
     }
 }
 
+.loader {
+    position: fixed;
+    width: 100%;
+    margin-top: 58px;
+}
+
 .navigation {
     background-color: rgba($primary, 0.75);
     padding: 0;

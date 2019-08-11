@@ -1,5 +1,4 @@
 <ng-container *ngIf="club$|async; let model">
-    <loader [show]="model.loading"></loader>
     <div class="row" *ngIf="!model.loading">
         <div class="col-lg-4">
             <panel name="Club Details" [collapsible]="false">

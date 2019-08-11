@@ -9,19 +9,19 @@ import { FixturesPage } from './ui/fixtures.page';
 import { FixturesService } from './sdk/fixtures.service';
 
 @NgModule({
-    imports: [
-        AngularCommonModule,
-        RouterModule,
-        CommonUiModule,
-        CommonSdkModule,
-        UiModule
-    ],
-    declarations: [
-        FixturesPage
-    ],
-    exports: [
-        FixturesPage
-    ],
-    providers: [FixturesService]
+	imports: [
+		AngularCommonModule,
+		RouterModule,
+		CommonUiModule,
+		CommonSdkModule,
+		UiModule
+	],
+	declarations: [
+		FixturesPage
+	],
+	exports: [
+		FixturesPage
+	],
+	providers: [FixturesService]
 })
 export class FixturesModule { }

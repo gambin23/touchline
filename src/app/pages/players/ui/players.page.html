@@ -1,5 +1,5 @@
 <ng-container *ngIf="players$|async; let model">
-	<panel name="Players" [collapsible]="false" [loading]="model.loading" [error]="model.error">
+	<panel name="Players" [collapsible]="false" [error]="model.error">
 		<ng-container *ngIf="model.data; let players">
 			<div id="filters" class="panel-title-alt">
 				<div>Filters</div>

@@ -1,9 +1,9 @@
 export const COUNTRIES = {
-    'mt': 'malta',
-    'gb': 'united-kingdom',
-    'gb-1': 'england',
-    'it': 'italy',
-    'fr': 'france',
-    'es': 'spain',
-    'de': 'germany'
-}
+	mt: 'malta',
+	gb: 'united-kingdom',
+	gb_en: 'england',
+	it: 'italy',
+	fr: 'france',
+	es: 'spain',
+	de: 'germany'
+};

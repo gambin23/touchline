@@ -11,6 +11,6 @@ export class PlayerService {
 	constructor(private api: ApiService) { }
 
 	player$(id: number): Observable<Api<Player>> {
-		return this.api.get$<Player>('people/1', null, PLAYERS.find(p => p.id === id))
+		return this.api.get$<Player>('people/1', null, PLAYERS.find(p => p.id === id));
 	}
 }

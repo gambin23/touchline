@@ -1,4 +1,4 @@
 <navigation *ngIf="(isAuthenticated$|async)">
     <router-outlet></router-outlet>
 </navigation>
-<router-outlet *ngIf="!(isAuthenticated$|async)"></router-outlet>
+<router-outlet *ngIf="(isAuthenticated$|async) === false"></router-outlet>

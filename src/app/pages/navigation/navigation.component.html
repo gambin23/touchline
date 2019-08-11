@@ -33,6 +33,9 @@
 		</div>
 	</div>
 	<div class="wrapper" [class.collapsed]="showMenu">
+		<div *ngIf="loading$|async" class="loader">
+			<div class="loading"></div>
+		</div>
 		<nav class="navigation">
 			<div id="search-box">
 				<i class="fa fa-search"></i>

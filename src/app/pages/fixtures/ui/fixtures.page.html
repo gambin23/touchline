@@ -1,9 +1,11 @@
 <ng-container *ngIf="fixtures$|async; let model">
-	 <panel name="Fixtures" [collapsible]="false" [loading]="model.loading" [error]="model.error">
-		<div class="panel-title-alt" [routerLink]="['/club', model.data?.club.id]">
-			<club-logo class="mr-3" [id]="model.data?.club.logo"></club-logo>
-			{{model.data?.club.name}}
-		</div>
+	<panel name="Fixtures" [collapsible]="false" [error]="model.error">
+		<ng-container *ngIf="model.data; let fixtures">
+				<div class="panel-title-alt" [routerLink]="['/club', model.data?.club.id]">
+					<club-logo class="mr-3" [id]="model.data?.club.logo"></club-logo>
+					{{model.data?.club.name}}
+				</div>
+		</ng-container>
 	</panel>
 	<ng-container *ngIf="model.data; let fixtures">
 		<panel name="Live">

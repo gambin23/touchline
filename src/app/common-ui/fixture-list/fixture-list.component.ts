@@ -35,10 +35,13 @@ export function matchStatus(match: Match): MatchStatus {
 	const kickOffDate = moment(match.date);
 	const endDate = moment(match.date).add(90, 'm');
 
-	if (currentDate >= kickOffDate && currentDate <= endDate)
+	if (currentDate >= kickOffDate && currentDate <= endDate) {
 		return 'inProgress';
-	if (currentDate < kickOffDate)
+	}
+	if (currentDate < kickOffDate) {
 		return 'notPlayed';
-	if (currentDate > endDate)
+	}
+	if (currentDate > endDate) {
 		return 'played';
+	}
 }

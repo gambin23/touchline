@@ -10,19 +10,19 @@ import { ClubPage } from './ui/club.page';
 import { ClubService } from './sdk/club.service';
 
 @NgModule({
-    imports: [
-        AngularCommonModule,
-        RouterModule,
-        CommonUiModule,
-        CommonSdkModule,
-        UiModule
-    ],
-    declarations: [
-        ClubPage
-    ],
-    exports: [
-        ClubPage
-    ],
-    providers: [ClubService]
+	imports: [
+		AngularCommonModule,
+		RouterModule,
+		CommonUiModule,
+		CommonSdkModule,
+		UiModule
+	],
+	declarations: [
+		ClubPage
+	],
+	exports: [
+		ClubPage
+	],
+	providers: [ClubService]
 })
 export class ClubModule { }

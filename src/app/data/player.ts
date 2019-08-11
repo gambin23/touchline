@@ -4,7 +4,7 @@ export const PLAYER: Player = {
 	id: 1,
 	clubId: 1001,
 	clubName: 'Boston City FC',
-	countryId: "mt",
+	countryId: 'mt',
 	name: 'Massimo',
 	surname: 'Truzzi',
 	shirtNumber: 10,
@@ -62,5 +62,5 @@ export const PLAYERS: Player[] = [
 	{ ...PLAYER, id: 22, name: 'Sean', surname: 'Abela', shirtNumber: 73, position: PlayerPosition.CM, playingPosition: PlayingPosition.NoPosition, value: 90000 },
 	{ ...PLAYER, id: 23, name: 'Alex', surname: 'Cauchi', shirtNumber: 76, position: PlayerPosition.ST, playingPosition: PlayingPosition.NoPosition, value: 20000 },
 	{ ...PLAYER, id: 24, name: 'Norbert', surname: 'Borg', shirtNumber: 44, position: PlayerPosition.RM, playingPosition: PlayingPosition.NoPosition, value: 30000 }
-]
+];
 

@@ -1,5 +1,5 @@
 export interface Manager {
-    username: string;
+	username: string;
 	name: string;
 	surname: string;
 	clubId: number;

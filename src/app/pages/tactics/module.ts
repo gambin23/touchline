@@ -9,18 +9,18 @@ import { TacticsService } from './sdk/tactics.service';
 import { TacticsPage } from './ui/tactics.page';
 
 @NgModule({
-    imports: [
-        AngularCommonModule,
-        CommonUiModule,
-        CommonSdkModule,
-        UiModule
-    ],
-    declarations: [
-        TacticsPage
-    ],
-    exports: [
-        TacticsPage
-    ],
-    providers: [TacticsService]
+	imports: [
+		AngularCommonModule,
+		CommonUiModule,
+		CommonSdkModule,
+		UiModule
+	],
+	declarations: [
+		TacticsPage
+	],
+	exports: [
+		TacticsPage
+	],
+	providers: [TacticsService]
 })
 export class TacticsModule { }

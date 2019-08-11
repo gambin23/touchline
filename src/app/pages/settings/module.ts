@@ -10,21 +10,21 @@ import { SettingsBackgroundComponent } from './ui/background/background.componen
 import { SettingsPage } from './ui/settings.page';
 
 @NgModule({
-    imports: [
-        AngularCommonModule,
-        RouterModule,
-        CommonUiModule,
-        CommonSdkModule,
-        UiModule
-    ],
-    declarations: [
-        SettingsBackgroundComponent,
-        SettingsPage
-    ],
-    exports: [
-        SettingsBackgroundComponent,
-        SettingsPage
-    ],
-    providers: []
+	imports: [
+		AngularCommonModule,
+		RouterModule,
+		CommonUiModule,
+		CommonSdkModule,
+		UiModule
+	],
+	declarations: [
+		SettingsBackgroundComponent,
+		SettingsPage
+	],
+	exports: [
+		SettingsBackgroundComponent,
+		SettingsPage
+	],
+	providers: []
 })
 export class SettingsModule { }

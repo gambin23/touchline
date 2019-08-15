@@ -1,30 +1,66 @@
 @import '_variables';
 
-.player-banner {
-    min-height: 250px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 25px;
-    background-color: rgba($dark, 0.75);
-    border: 2px solid $dark;
+.name {
+    font-size: $font-m;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 15px;
 }
 
-.player-header {
-    min-height: 250px;
+.position {
+    font-size: $font-m;
+    font-weight: 900;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    background-color: rgba($black, 0.5);
+    border: 1px solid rgba($dark, 0.5);
+}
+
+.player-image {
+    padding-top: 15px;
+    height: 100%;
+}
+
+.flag {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.banner-icons {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 25px;
-    width: 100%;
-    background-color: rgba($dark, 0.75);
+    align-content: center;
+    margin-bottom: 0;
+
+    & li {
+        background-color: rgba($dark, 0.75);
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        margin: 1px;
+        border: 1px solid $dark;
+        vertical-align: center;
+    }
+
 }
 
-.player-number {
-    font-family: $font-highlight;
-    font-size: 160px;
-    font-style: italic;
-    color: mix($dark, white);
-    line-height: 160px;
-    padding: 0 25px;
+
+.shirt {
+    font-size: 30px;
+    margin-top: -5px;
+
+    & i {
+        width: 50px;
+    }
+
+    & span {
+        font-size: $font-s;
+        color: $dark;
+        font-family: $font-highlight;
+
+    }
 }

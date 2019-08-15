@@ -27,7 +27,7 @@ export class ApiService {
 
 	post$<T>(url: string, body: T, params?: HttpParams | { [param: string]: string | string[]; }, mock?: T): Observable<Api<T>> {
 		return this.http.post(`${this.baseUrl}/${url}`, body, { params }).pipe(
-			map((response: T) => ({ loading: false, data: mock ? mock : response }))
+			map((response: T) => ({ loading: false, data: mock ? mock : response })),
 			catchError(() => of({ loading: false, error: 'Something went wrong' })),
 			startWith({ loading: true })
 		);

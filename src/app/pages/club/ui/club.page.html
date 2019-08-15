@@ -3,15 +3,15 @@
         <div class="col-lg-4">
             <panel name="Club Details" [collapsible]="false">
                 <ng-container *ngIf="model.data; let club">
-                    <h5 class="panel-title-alt text-center text-uppercase m-0">{{club.name}}</h5>
-                    <div class="panel-content">
-                        <div class="text-center">
+                    <div class="panel-content text-center">
+                        <h5 class="list-item active text-uppercase">{{club.name}}</h5>
+                        <div class="list-item league" [routerLink]="['/league', club.leagueId]">
+                           <flag [id]="club.countryId" size="S"></flag> &nbsp;{{club.league?.name}}
+                        </div>
+                        <div>
                             <club-logo [id]="club.logo" size="XL"></club-logo>
                         </div>
-                        <div class="p-4 text-center">
-                            <h5>
-                                <flag [id]="club.countryId" size="S"></flag> {{club.league?.name}}
-                            </h5>
+                        <div class="p-4">
                             <h5>Estimated Value</h5>
                             <h6><b>€ {{club.estimatedValue | number}}</b></h6>
                         </div>

@@ -190,6 +190,19 @@ export const CLUBS: Club[] = [
 				clubId: 3
 			}
 		}
+	},
+	{
+		...CLUB, ...{
+			id: 1001,
+			logo: 3,
+			name: 'Lozano FC',
+			manager: {
+				username: 'ChrisS',
+				name: 'Chris',
+				surname: 'Said',
+				clubId: 3
+			}
+		}
 	}];
 
 

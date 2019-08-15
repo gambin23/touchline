@@ -17,7 +17,7 @@ export const PLAYER: Player = {
 	height: 185,
 	injured: false,
 	retired: false,
-	avatar: 2,
+	avatar: 77,
 	seasonMatches: 11,
 	careerMatches: 191,
 	seasonGoals: 3,

@@ -1,51 +1,38 @@
 <ng-container *ngIf="player$|async; let model">
 	<ng-container *ngIf="model.data; let player">
-		<div class="row mt-3">
-			<div class="col-sm-4">
-				<div class="player-banner">
-					<player-image [id]="player.avatar" size="XL" class="player-image"></player-image>
-				</div>
-			</div>
-			<div class="col-sm-8">
-				<div class="player-header">
-					<div>
-						<h1>{{positions[player.position]}}</h1>
-						<h4><b>{{player.name}} {{player.surname}}</b></h4>
-						<h6>{{player.age[0]}} years / {{player.age[1]}} days</h6>
-					</div>
-					<span class="player-number">
-						{{player.shirtNumber}}
-					</span>
-				</div>
-			</div>
-		</div>
 		<div class="row">
 			<div class="col-md-4">
+				<panel name="Player Profile" [collapsible]="false">
+					<div class="list-item-alt active">
+						<span class="list-item-alt-icon position">{{positions[player.position]}}</span>
+						<span class="name">{{player.name}} {{player.surname}}</span>
+					</div>
+					<div class="banner">
+						<flag class="flag" [id]="player.countryId"></flag>
+						<div class="player-image">
+							<player-image [id]="player.avatar" size="XL"></player-image>
+						</div>
+						<ul class="banner-icons">
+							<li>
+								<span class="fa-stack shirt">
+									<i class="fa fa-tshirt"></i>
+									<span class="fa fa-stack-1x">{{player.shirtNumber}}</span>
+								</span>
+							</li>
+							<li><i class="fa fa-ruler-vertical"></i> {{player.height}} cm</li>
+							<li><i class="fa fa-weight"></i> {{player.weight}} kg</li>
+						</ul>
+					</div>
+
+				</panel>
 				<panel name="Estimated value" [collapsible]="false">
 					<ul class="list">
-						<li class="list-item active font-size">
+						<li class="list-item active">
 							<h4 class="p-0"><span style="padding: 0 5px; margin-right: 10px;">€</span> {{player.value | number}}</h4>
 						</li>
-						<li class="list-item text-uppercase">
+						<li class="list-item text-uppercase" [routerLink]="['/club', player.clubId]">
 							<club-logo id="4" class="mr-3"></club-logo>
 							{{player.clubName}}
-						</li>
-					</ul>
-				</panel>
-				<panel name="Details">
-					<ul class="list">
-						<li class="list-item">
-							<flag [id]="player.countryId" class="mr-3"></flag>
-							{{player.countryId | country}}
-						</li>
-						<li class="list-item">
-							€ {{player.salary | number}} / week
-						</li>
-						<li class="list-item">
-							Contracted {{player.contractLength}} seasons
-						</li>
-						<li class="list-item">
-							{{player.height}} cm / {{player.weight}} kg
 						</li>
 					</ul>
 				</panel>
@@ -60,11 +47,11 @@
 					<tab name="Stats" [isWrapped]="false">
 						<player-stats [player]="player"></player-stats>
 					</tab>
-					<tab name="Contract">
-						Contract
+					<tab name="Contract" [isWrapped]="false">
+						<player-contract [player]="player"></player-contract>
 					</tab>
-					<tab name="Transfer">
-						Transfer
+					<tab name="Transfer" [isWrapped]="false">
+						<player-transfer [player]="player"></player-transfer>
 					</tab>
 				</tabs>
 			</div>

@@ -1,5 +1,11 @@
 @import '_variables';
 
+.league {
+    background-color: rgba($dark, 0.75);
+    margin-bottom: 10px;
+    font-size: $font-m;
+}
+
 .stadium-name {
     position: absolute;
     padding: 10px;

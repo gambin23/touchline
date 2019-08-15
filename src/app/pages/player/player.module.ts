@@ -9,6 +9,8 @@ import { CommonSdkModule } from '../../common-sdk';
 import { PlayerPage } from './ui/player.page';
 import { PlayerStatsComponent } from './ui/stats/stats.component';
 import { PlayerService } from './sdk/player.service';
+import { PlayerContractComponent } from './ui/contract/contract.component';
+import { PlayerTransferComponent } from './ui/transfer/transfer.component';
 
 @NgModule({
 	imports: [
@@ -20,11 +22,12 @@ import { PlayerService } from './sdk/player.service';
 	],
 	declarations: [
 		PlayerPage,
-		PlayerStatsComponent
+		PlayerStatsComponent,
+		PlayerContractComponent,
+		PlayerTransferComponent
 	],
 	exports: [
-		PlayerPage,
-		PlayerStatsComponent
+		PlayerPage
 	],
 	providers: [PlayerService]
 })

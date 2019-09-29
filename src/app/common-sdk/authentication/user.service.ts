@@ -18,6 +18,7 @@ export class UserService {
 	}
 
 	getBackground(): number {
-		return Number(localStorage.getItem('background'));
+		const backgroundId = Number(localStorage.getItem('background'));
+		return backgroundId ? backgroundId : 1;
 	}
 }

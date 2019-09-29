@@ -5,6 +5,7 @@ export const PLAYER: Player = {
 	clubId: 1001,
 	clubName: 'Boston City FC',
 	countryId: 'mt',
+	agentId: 1,
 	name: 'Massimo',
 	surname: 'Truzzi',
 	shirtNumber: 10,

@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 
 import { User } from '../../models/index';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-	constructor() { }
+	constructor(private router: Router) {
+	}
 
 	private isAuthenticated = new BehaviorSubject<boolean>(this.initialState());
 
@@ -16,11 +18,12 @@ export class AuthenticationService {
 
 	logout() {
 		localStorage.setItem('user', null);
+		this.router.navigate(['login']);
 		this.isAuthenticated.next(false);
 	}
 
-	isAuthenticated$() {
-		return this.isAuthenticated.asObservable();
+	isAuthenticated$(): Observable<boolean> {
+		return this.isAuthenticated;
 	}
 
 	user$(): Observable<User> {

@@ -1,1 +1,15 @@
+@import '_variables';
 
+.agent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.agent-details {
+    padding: 25px;
+}
+
+.agent-dialogue {
+    padding: 25px;
+}

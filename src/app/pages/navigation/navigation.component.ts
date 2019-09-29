@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Store, select } from '@ngrx/store';
 
-import { State, AuthenticationService, LoaderSelector } from '../../common-sdk';
+import { AuthenticationService, LoaderSelector } from '../../common-sdk';
 import { Observable } from 'rxjs';
 
 

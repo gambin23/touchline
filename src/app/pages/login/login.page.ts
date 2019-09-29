@@ -15,7 +15,7 @@ export class LoginPage {
 	) { }
 
 	login() {
-		this.authenticationService.login({ username: 'Gambin17', name: 'Gilbert', surname: 'Gambin', clubId: 1 });
+		this.authenticationService.login({ username: 'JohnDoe', name: 'John', surname: 'Doe', clubId: 1 });
 		this.router.navigate(['home']);
 	}
 }

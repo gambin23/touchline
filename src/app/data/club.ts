@@ -5,6 +5,7 @@ const PLAYER: Player = {
 	clubId: 1001,
 	clubName: 'Boston City FC',
 	countryId: 'mt',
+	agentId: 1,
 	name: 'Massimo',
 	surname: 'Truzzi',
 	shirtNumber: 10,
@@ -65,9 +66,9 @@ const MATCH: Match = {
 		homeMatches: [],
 		awayMatches: [],
 		manager: {
-			name: 'Gilbert',
-			surname: 'Gambin',
-			username: 'Gambin17',
+			name: 'John',
+			surname: 'Doe',
+			username: 'JohnDoe',
 			clubId: 1
 		},
 		league: null
@@ -147,9 +148,9 @@ export const CLUB: Club = {
 	homeMatches: [MATCH],
 	awayMatches: [{ ...MATCH, ...{ id: 2, homeClub: MATCH.awayClub, awayClub: MATCH.homeClub } }],
 	manager: {
-		name: 'Gilbert',
-		surname: 'Gambin',
-		username: 'Gambin17',
+		name: 'John',
+		surname: 'Doe',
+		username: 'John_Doe',
 		clubId: 1
 	},
 	league: {

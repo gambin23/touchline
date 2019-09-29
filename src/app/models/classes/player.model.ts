@@ -6,6 +6,7 @@ export interface Player {
 	clubId?: number;
 	clubName?: string;
 	countryId: string;
+	agentId: number;
 	name: string;
 	surname: string;
 	shirtNumber: number;

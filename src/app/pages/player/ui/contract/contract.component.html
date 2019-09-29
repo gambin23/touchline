@@ -8,3 +8,24 @@
 		</li>
 	</ul>
 </panel>
+
+<panel name="Negotiate Contract" [loading]="agent.loading">
+	<ng-container *ngIf="agent.data; let agent;">
+		<div class="agent list-item-alt">
+			<div class="agent-details">
+				<h4>{{agent.name}} {{agent.surname}}</h4>
+				<p><i>He is a reasonable agent.</i></p>
+			</div>
+			<div class="agent-image">
+				<agent-image [id]="agent.avatar" size="L"></agent-image>
+			</div>
+		</div>
+		<button *ngIf="!agentDialogueShow" class="btn btn-primary" (click)="startNegotations()">
+			Start contract negotiations
+		</button>
+		<div *ngIf="agentDialogueShow" class="list-item-alt agent-dialogue" [class.yellow]="agentDialogue.dialogueType === agentDialogueTypes.Negotiable"
+			[class.green]="agentDialogue.dialogueType === agentDialogueTypes.Accepted" [class.red]="agentDialogue.dialogueType === agentDialogueTypes.Rejected">
+			"{{agentDialogue.message}}"
+		</div>
+	</ng-container>
+</panel>

@@ -4,6 +4,7 @@ export { League } from './classes/league.model';
 export { Club } from './classes/club.model';
 export { Player } from './classes/player.model';
 export { Match } from './classes/match.model';
+export { Agent } from './classes/agent.model';
 
 export { Color } from './enums/color.enum';
 export { PlayerPosition } from './enums/player-position.enum';

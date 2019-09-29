@@ -15,6 +15,7 @@ import { PlayerBarComponent } from './player-bar/player-bar.component';
 import { RouterModule } from '@angular/router';
 import { FixtureListComponent } from './fixture-list/fixture-list.component';
 import { PlayerListComponent } from './player-list/player-list.component';
+import { AgentImageComponent } from './agent-image/agent-image.component';
 
 @NgModule({
 	imports: [
@@ -33,7 +34,8 @@ import { PlayerListComponent } from './player-list/player-list.component';
 		PlayerTooltipComponent,
 		PlayerBarComponent,
 		FixtureListComponent,
-		PlayerListComponent
+		PlayerListComponent,
+		AgentImageComponent
 	],
 	exports: [
 		ClubLogoComponent,
@@ -45,7 +47,8 @@ import { PlayerListComponent } from './player-list/player-list.component';
 		PlayerTooltipComponent,
 		PlayerBarComponent,
 		FixtureListComponent,
-		PlayerListComponent
+		PlayerListComponent,
+		AgentImageComponent
 	]
 })
 export class CommonUiModule { }

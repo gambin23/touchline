@@ -1,4 +1,10 @@
 <navigation *ngIf="(isAuthenticated$|async)">
-    <router-outlet></router-outlet>
+    <ng-container *ngTemplateOutlet="router"></ng-container>
 </navigation>
-<router-outlet *ngIf="(isAuthenticated$|async) === false"></router-outlet>
+<ng-container *ngIf="(isAuthenticated$|async) === false">
+    <ng-container *ngTemplateOutlet="router"></ng-container>
+</ng-container>
+
+<ng-template #router>
+    <router-outlet></router-outlet>
+</ng-template>

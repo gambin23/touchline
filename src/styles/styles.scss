@@ -114,14 +114,21 @@ ul {
     font-weight: bold;
 }
 
-.error {
+.error,
+.red {
     color: $white;
     background-color: rgba($error, 0.5)
 }
 
-.warning {
+.warning,
+.yellow {
     color: $white;
     background-color: rgba($warning, 0.5)
+}
+
+.green {
+    color: $white;
+    background-color: rgba($accent, 0.5)
 }
 
 @import "~bootstrap/scss/bootstrap";

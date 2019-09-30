@@ -68,7 +68,8 @@ const routes: Routes = [
 	},
 	{
 		path: '**',
-		component: NotFoundPage
+		component: NotFoundPage,
+		canActivate: [AuthenticatedGuard]
 	}
 
 ];

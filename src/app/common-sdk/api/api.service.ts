@@ -13,7 +13,7 @@ export class ApiService {
 		private loaderActions: LoaderActions
 	) { }
 
-	baseUrl = 'https://swapi.co/api';
+	baseUrl = 'https://swapi.dev/api';
 
 	get$<T>(url: string, params?: HttpParams | { [param: string]: string | string[]; }, mock?: T): Observable<Api<T>> {
 		this.loaderActions.showLoader();

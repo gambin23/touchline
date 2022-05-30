@@ -32,6 +32,6 @@ export class AuthenticationService {
 
 	private initialState() {
 		const user = localStorage.getItem('user');
-		return user !== 'null' ? true : false;
+		return !!user;
 	}
 }
